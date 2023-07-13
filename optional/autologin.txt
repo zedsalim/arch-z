@@ -1,4 +1,4 @@
-# LoghtDM
+# LoghtDM Autologin
 groupadd -r autologin
 gpasswd -a zed autologin
 
@@ -14,16 +14,8 @@ GRUB_HIDDEN_TIMEOUT=0
 #arch
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 
-#debian
-sudo update-grub
 -----------------------------------
-# TTY
+# TTY Autologin
 sudo nano /lib/systemd/system/getty@.service
 ExecStart=-/sbin/agetty --autologin zed --noclear %I $TERM
 
-------------------------------------
-# LAPTOP SCREEN
-
-sudo vim /etc/systemd/logind.conf
-
-HandleLidSwitch=ignore
