@@ -55,3 +55,4 @@ source optional/keyboard_layout.sh
 source optional/terminal_in_pcmanfm.sh
 source optional/nvim.sh
 source optional/default_apps.sh
+source optional/nvim-desktop.sh
