@@ -19,6 +19,9 @@ alt + s
 alt + b 
 	source ~/.config/scripts/bookmarks.sh
 
+alt + h 
+	/mnt/FILES/Files/Docs/home-server.sh
+
 alt + l
 	/mnt/FILES/Files/My_Stuff/mytodo/todo
 
@@ -48,7 +51,7 @@ super + Return
 	kitty
 
 super + p
-   	rofi -show drun -line padding 4 -hide-scrollbar -show-icons
+  rofi -show drun -line padding 4 -hide-scrollbar -show-icons
    	
 super + d
 	discord
@@ -61,9 +64,6 @@ super + n
 
 super + s 
   filezilla
-
-super + g
-	github-desktop
 
 super + w 
   brave
@@ -91,7 +91,6 @@ XF86AudioMute
     pactl set-sink-mute @DEFAULT_SINK@ toggle
 
 # Brightness bindings
-
 XF86MonBrightnessDown
     ~/.config/scripts/brightness-control.sh XF86MonBrightnessDown
 
