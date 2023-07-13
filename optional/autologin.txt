@@ -1,0 +1,29 @@
+# LoghtDM
+groupadd -r autologin
+gpasswd -a zed autologin
+
+sudo vim /etc/lightdm/lightdm.conf
+[Seat:*]
+autologin-user=zed
+----------------------------------
+# GRUB
+sudo vim /etc/default/grub
+GRUB_TIMEOUT=0
+GRUB_HIDDEN_TIMEOUT=0
+
+#arch
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+
+#debian
+sudo update-grub
+-----------------------------------
+# TTY
+sudo nano /lib/systemd/system/getty@.service
+ExecStart=-/sbin/agetty --autologin zed --noclear %I $TERM
+
+------------------------------------
+# LAPTOP SCREEN
+
+sudo vim /etc/systemd/logind.conf
+
+HandleLidSwitch=ignore

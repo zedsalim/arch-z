@@ -1,0 +1,87 @@
+######################################
+#            External
+
+include $HOME/.config/i3/workspaces.conf
+include $HOME/.config/i3/colors.conf
+exec --no-startup-id ibus-daemon -drx
+exec_always feh --bg-fill ~/.config/wallpapers/moon.jpg
+#exec_always --no-startup-id ~/.fehbg
+exec_always --no-startup-id ~/.config/i3/autostart.sh
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec --no-startup-id ~/.config/scripts/resolution.sh
+#exec --no-startup-id ~/.config/scripts/resolution-double.sh
+######################################
+#              Vars
+
+set $mod Mod4
+set $alt Mod1 
+set $g_inner 9
+set $g_outer 4
+smart_borders on
+######################################
+#             Theme
+
+
+font pango:DejaVu Sans Mono 10
+
+#font pango:monospace 8
+new_window 1pixel
+gaps inner $g_inner
+gaps outer $g_outer
+default_border pixel 2
+default_floating_border pixel 2
+floating_modifier $mod
+bindsym $mod+q kill
+
+######################################
+#           	Gaps
+
+bindsym $mod+Shift+n 	gaps inner current set $g_inner; gaps outer current set $g_outer
+bindsym $mod+x		gaps outer current plus 5
+bindsym $mod+Shift+x	gaps outer current minus 5 
+bindsym $mod+z		gaps inner current plus 5
+bindsym $mod+Shift+z	gaps inner current minus 5
+######################################
+#    	 System keybindings
+
+# Reboot
+bindsym $mod+Shift+b exec "reboot"
+# Power off
+bindsym $mod+Shift+s exec "poweroff"
+
+# change container layout (stacked, tabbed, toggle split)
+bindsym $alt+Shift+s layout stacking
+bindsym $alt+Shift+t layout tabbed
+bindsym $alt+Shift+e layout toggle split
+
+# Browser
+bindsym $mod+w exec brave
+
+# Open Alacritty in floating mode
+bindsym $mod+Shift+Return exec alacritty --class AlacrittyFloating
+
+# Set AlacrittyFloating window to floating mode
+for_window [class="AlacrittyFloating"] floating enable, move position center
+
+# Set AlacrittyC window to floating mode and move to top-left with increased height (for listing projects)
+for_window [class="AlacrittyC"] floating enable, move position 0 28, resize set 25 ppt 97 ppt
+
+# Open sxiv in fullscreen mode
+for_window [class="Sxiv"] fullscreen
+
+# Open specific applications in floating mode
+for_window [title="alsamixer"] floating enable border pixel 1
+for_window [class="gnome-disks"] floating enable border pixel 1
+for_window [class="Galculator"] floating enable border pixel 1
+for_window [class="GParted"] floating enable border normal
+for_window [class="Lxappearance"] floating enable sticky enable border normal
+for_window [class="Pavucontrol"] floating enable
+for_window [class="qt5ct"] floating enable sticky enable border normal
+for_window [class="Simple-scan"] floating enable border normal
+for_window [class="Todo"] floating enable, resize set 800 800, move position center
+for_window [class="FileZilla"] floating enable, resize set 1000 1000, move position center
+for_window [class="ViberPC"] floating enable, resize set 800 800, move position center
+for_window [class="qBittorrent"] floating enable sticky enable border normal
+
+# switch to workspace with urgent window automatically
+for_window [urgent=latest] focus

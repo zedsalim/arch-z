@@ -1,0 +1,5 @@
+vim ~/.Xresources
+xrdb -merge 96
+
+xrdb -merge ~/.Xresources
+

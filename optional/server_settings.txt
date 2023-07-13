@@ -1,0 +1,73 @@
+# Brightness
+ls /sys/class/backlight/
+cd /sys/class/backlight/intel_backlight
+cat max_brightness
+sudo sh -c 'echo 100 > brightness'
+sudo chmod o+w brightness (if no permissions)
+
+-----------------------------------
+# TTY
+sudo nano /lib/systemd/system/getty@.service
+ExecStart=-/sbin/agetty --autologin server --noclear %I $TERM
+
+------------------------------------
+# GRUB
+sudo vim /etc/default/grub
+GRUB_TIMEOUT=0
+GRUB_HIDDEN_TIMEOUT=0
+
+sudo update-grub
+
+------------------------------------
+# LAPTOP SCREEN
+sudo vim /etc/systemd/logind.conf
+HandleLidSwitch=ignore
+
+------------------------------------
+# Terminal
+
+echo "export TERM=xterm" >> ~/.bashrc
+
+------------------------------------
+# APPS
+sudo apt install lm-sensors acpi htop neofetch vim git curl wget 
+sudo sensors-detect
+sensors 
+
+------------------------------------
+# Aliasses
+echo "alias v='vim'
+alias h='htop'
+alias bat='acpi -V'
+alias cpu='sensors'
+alias n='neofetch'" >> ~/.bashrc
+
+-------------------------------------
+# SSH autologin
+ssh-keygen -t rsa
+ssh-copy-id server@192.168.1.33
+
+-------------------------------------
+# Sudoers
+server ALL=(ALL) NOPASSWD: /sbin/shutdown now
+server ALL=(ALL) NOPASSWD: /sbin/reboot
+server ALL=(ALL) NOPASSWD: /usr/bin/off
+
+-------------------------------------
+# Static IP 
+sudo nano /etc/network/interfaces
+auto enp1s0f2
+iface enp1s0f2 inet static
+  address 192.168.1.33
+  netmask 255.255.255.0
+  gateway 192.168.1.1
+  dns-nameservers 192.168.1.33 1.1.1.1
+sudo systemctl restart networking
+
+
+sudo nano /etc/resolv.conf
+nameserver 192.168.1.33
+nameserver 1.1.1.1
+
+-------------------------------------
+# Set Up Tailscale in the main server

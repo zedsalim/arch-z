@@ -1,0 +1,1 @@
+zed ALL=(ALL) NOPASSWD: /home/zed/.config/scripts/yt_blocker.sh
