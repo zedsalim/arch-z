@@ -5,11 +5,11 @@ include $HOME/.config/i3/workspaces.conf
 include $HOME/.config/i3/colors.conf
 exec --no-startup-id ibus-daemon -drx
 exec_always feh --bg-fill ~/.config/wallpapers/moon.jpg
-#exec_always --no-startup-id ~/.fehbg
+# exec_always --no-startup-id ~/.fehbg
 exec_always --no-startup-id ~/.config/i3/autostart.sh
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-exec --no-startup-id ~/.config/scripts/resolution.sh
-#exec --no-startup-id ~/.config/scripts/resolution-double.sh
+# exec --no-startup-id ~/.config/scripts/resolution.sh
+# exec --no-startup-id ~/.config/scripts/resolution-double.sh
 ######################################
 #              Vars
 
@@ -23,8 +23,7 @@ smart_borders on
 
 
 font pango:DejaVu Sans Mono 10
-
-#font pango:monospace 8
+# font pango:monospace 8
 new_window 1pixel
 gaps inner $g_inner
 gaps outer $g_outer
@@ -79,8 +78,7 @@ for_window [class="Pavucontrol"] floating enable
 for_window [class="qt5ct"] floating enable sticky enable border normal
 for_window [class="Simple-scan"] floating enable border normal
 for_window [class="Todo"] floating enable, resize set 800 800, move position center
-for_window [class="FileZilla"] floating enable, resize set 1000 1000, move position center
-for_window [class="ViberPC"] floating enable, resize set 800 800, move position center
+# for_window [class="FileZilla"] floating enable, resize set 1000 1000, move position center
 for_window [class="qBittorrent"] floating enable sticky enable border normal
 
 # switch to workspace with urgent window automatically
