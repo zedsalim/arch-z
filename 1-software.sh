@@ -29,6 +29,8 @@ PKGS=(
     'wget'                   # File downloader
     'polkit-gnome'           # PolicyKit authentication agent
     'gvfs-mtp'               # MTP support for file managers
+    'dosfstools'             # Managing FAT file systems
+    'ntfs-3g'                # Managing NTFS file systems
 
     # Section 3: File Managers
     'thunar'                 # File manager
@@ -45,6 +47,7 @@ PKGS=(
     'htop'                   # System monitoring tool
     'dbus'                   # Message bus system
     'python-pip'             # Package installer for Python
+    'github-cli'             # Interact with GitHub repositories via command line
 
     # Section 5: Image and Media Tools
     'feh'                    # Image viewer and wallpaper setter
