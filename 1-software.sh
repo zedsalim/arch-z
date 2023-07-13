@@ -15,7 +15,7 @@ PKGS=(
     'xbindkeys'              # Keyboard binding configuration
 
     # Section 2: Window Manager Tools
-    # 'brightnessctl'        # Backlight control
+    'brightnessctl'          # Backlight control
     'i3-gaps'                # Tiling window manager
     'rofi'                   # Application launcher
     'dmen'                   # Dynamic menu
@@ -23,6 +23,7 @@ PKGS=(
     'dunst'                  # Notification daemon
     'libnotify'              # Notification library
     'picom'                  # Compositor
+    'kitty'                  # Terminal emulator
     'alacritty'              # Terminal emulator
     'lxappearance'           # GTK+ theme switcher
     'wget'                   # File downloader
@@ -39,7 +40,7 @@ PKGS=(
     'gnome-disk-utility'     # Disk management utility
     'gparted'                # Partition editor
     'bleachbit'              # System cleaner
-    # 'neofetch'             # System information tool
+    # 'neofetch'             # System information tool (i'm using ufetch script instead)
     'arandr'                 # Screen layout editor
     'htop'                   # System monitoring tool
     'dbus'                   # Message bus system
@@ -67,7 +68,7 @@ PKGS=(
     'pavucontrol'            # Sound mixer
 
     # Section 8: Development Tools
-    # 'telegram-desktop'     # Messaging app
+    'telegram-desktop'       # Messaging app
     'code'                   # Source code editor
     'git'                    # Version control system
 
@@ -77,16 +78,15 @@ PKGS=(
     'file-roller'            # Archive manager
 
     # Section 11: Bluetooth and Printer
-    # 'bluez'                # Bluetooth stack utilities
-    # 'bluez-utils'          # Bluetooth stack utilities
-    # 'blueman'              # Bluetooth manager
+    'bluez'                  # Bluetooth stack utilities
+    'bluez-utils'            # Bluetooth stack utilities
+    'blueman'                # Bluetooth manager
     'cups'                   # Printing system
     'simple-scan'            # Document scanner
 
     # Section 12: Other Tools and Libraries
     'galculator'             # Calculator
     'zathura-pdf-poppler'    # PDF viewer
-    'qbittorrent'            # BitTorrent client
     'filezilla'              # FTP application
 
     # Section 13: Miscellaneous Utilities
@@ -112,8 +112,4 @@ for PKG in "${PKGS[@]}"; do
 done
 
 sudo systemctl enable cups
-# sudo systemctl enable bluetooth
-
-echo
-echo "Done!"
-echo
+sudo systemctl enable bluetooth
