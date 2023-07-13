@@ -5,8 +5,11 @@ git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
 
+# Installing dependencies for Ly Console Manager (uncomment if you don't want LightDm)
 # yay -S ly
 # sudo systemctl enable ly.service
+
+# Installing dependencies for LightDM Console Manager
 sudo pacman -S lightdm lightdm-gtk-greeter
 sudo systemctl enable lightdm
 
@@ -30,5 +33,5 @@ cd
 touch .xinitrc
 echo "exec i3" > .xinitrc
 
+# Installing Brave Browser
 yay -S brave-bin
-#yay -S gitahead
