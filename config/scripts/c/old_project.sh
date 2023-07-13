@@ -14,7 +14,7 @@ for i in "${!dirs[@]}"; do
 done
 
 # Use rofi to display the menu and prompt the user to select a project
-selected_project=$(echo -e "$project_list" | rofi -dmenu -l 30 -p "Select a project:" | awk '{gsub(/\./,""); print $1}')
+selected_project=$(echo -e "$project_list" | rofi -l 30 -dmenu -p "Select a project:" | awk '{gsub(/\./,""); print $1}')
 
 # Check if the selection is empty
 if [[ -z $selected_project ]]; then
