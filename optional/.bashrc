@@ -114,8 +114,6 @@ fi
 
 alias al='nvim ~/.bashrc'
 alias alu='source ~/.bashrc'
-alias ss='sudo shutdown now'
-alias rb='sudo reboot'
 alias ll='ls -l'
 alias la='ls -a'
 alias mkdir='mkdir -p'
@@ -128,14 +126,9 @@ alias h='htop'
 alias r='ranger'
 alias d='bash ~/.config/scripts/set-double-display.sh'
 alias s='bash ~/.config/scripts/set-single-display.sh'
-alias n='bash ~/.config/scripts/c/new_project.sh'
-alias o='bash ~/.config/scripts/c/old_project.sh'
 # alias c='bash ~/.config/scripts/c/compile.sh'
 alias c='gcc -Wall -Wextra main.c
 ./a.out'
-alias pn='bash ~/.config/scripts/python/new_project.sh'
-alias po='bash ~/.config/scripts/python/old_project.sh'
-alias pc='bash ~/.config/scripts/python/compile.sh'
 alias sts='git status'
 alias add='git add .'
 alias cmt='git commit -m'
@@ -148,6 +141,7 @@ if [ -f ~/.config/synth-shell/synth-shell-prompt.sh ] && [ -n "$( echo $- | grep
     source ~/.config/synth-shell/synth-shell-prompt.sh
 fi
 
+alias sl='ssh server@192.168.1.33'
 
 cmg() {
     git add .
