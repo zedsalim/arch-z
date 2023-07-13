@@ -87,6 +87,7 @@ PKGS=(
     # Section 12: Other Tools and Libraries
     'galculator'             # Calculator
     'zathura-pdf-poppler'    # PDF viewer
+    'qbittorrent'            # BitTorrent client
     'filezilla'              # FTP application
 
     # Section 13: Miscellaneous Utilities
