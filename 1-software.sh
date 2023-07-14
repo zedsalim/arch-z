@@ -51,7 +51,6 @@ PKGS=(
 
     # Section 5: Image and Media Tools
     'feh'                    # Image viewer and wallpaper setter
-    'mpv'                    # Media player
     'viewnior'               # Image viewer
     'flameshot'              # Screenshot tool
     'sxiv'                   # Image viewer
