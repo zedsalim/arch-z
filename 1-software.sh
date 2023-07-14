@@ -48,6 +48,7 @@ PKGS=(
     'dbus'                   # Message bus system
     'python-pip'             # Package installer for Python
     'github-cli'             # Interact with GitHub repositories via command line
+    'tmux'                   # Terminal multiplexer
 
     # Section 5: Image and Media Tools
     'feh'                    # Image viewer and wallpaper setter
