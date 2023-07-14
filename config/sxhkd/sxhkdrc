@@ -38,7 +38,6 @@ alt + p
   pavucontrol
 
 # BG Selector
-
 F1
 	source ~/.config/scripts/wallpaper-single-display.sh
 
@@ -46,16 +45,12 @@ F2
 	source ~/.config/scripts/wallpaper-double-display.sh
 
 # Programs
-
 super + Return
 	kitty
 
 super + p
   rofi -show drun -line padding 4 -hide-scrollbar -show-icons
    	
-super + d
-	discord
-
 super + r
   kitty -e "ranger"
 
@@ -98,12 +93,10 @@ XF86MonBrightnessUp
     ~/.config/scripts/brightness-control.sh XF86MonBrightnessUp
 
 # Switch between keyboard languages
-
 alt + space
   source ~/.config/scripts/keyboard_layout.sh
 
 #i3 Specific Keybindings
-
 super + q
   i3-msg kill
 
@@ -135,7 +128,6 @@ super + alt + a
   i3-msg focus parent
 
 # Workspaces
-
 super + {1-9,0}
   i3-msg workspace {1-9,10}
 
@@ -143,7 +135,6 @@ super + shift+{1-9,0}
   i3-msg move container to workspace number {1-9,10}
 
 # Movement
-
 super+{h,j,k,l}
   i3-msg focus {left,down,up,right}
 
