@@ -14,8 +14,6 @@ bash ~/arch-z/2-setup.sh
 bash ~/arch-z/3-fonts.sh
 bash ~/arch-z/4-rice.sh
 
-sudo nala autoremove
-
 printf "\e[1;32m
 #####################################################
 ____ _ ____ ____ ___     ___  _   _    ___  ____ ___
