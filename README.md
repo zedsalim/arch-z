@@ -24,7 +24,7 @@
 - **File Manager:** [pcmanfm](https://github.com/lxde/pcmanfm)
 - **Application Launcher:** [rofi](https://github.com/davatorium/rofi)
 
-This project is a shell script that automates the post installation process for a minimal Arch system, along with the i3 window manager. It aims to provide an easy and efficient way to configure and arch desktop environment with a Stylish lightweight and customizable window manager.
+This project is a shell script that automates the post installation process for a minimal Arch system, along with the i3 window manager. It aims to provide an easy and efficient way to configure an arch desktop environment with a Stylish lightweight and customizable window manager.
 
 The script installs the necessary packages and applications required for daily drive and a functional and beutiful i3wm setup, and other recommended utilities. It also configures various system settings to optimize the user experience and provides a clean minimal and stylish i3 configuration.
 
