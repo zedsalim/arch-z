@@ -177,9 +177,3 @@ ls
 
 - super + shift + b: Reboots the system (sudo reboot)
 - super + shift + s: Shuts down the system (sudo shutdown now)
-
-## Contact
-
-- [Facebook](https://facebook.com/sxaliim)
-- [Telegram](https://t.me/sxalim)
-- salim.zaidi@univ-bouira.dz
