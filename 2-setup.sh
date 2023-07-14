@@ -35,3 +35,9 @@ echo "exec i3" > .xinitrc
 
 # Installing Brave Browser
 yay -S brave-bin
+
+# Media player
+yay -S mpv
+
+# Video-sharing websites playback
+yay -S yt-dlp
