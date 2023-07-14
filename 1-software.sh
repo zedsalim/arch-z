@@ -15,7 +15,7 @@ PKGS=(
     'xbindkeys'              # Keyboard binding configuration
 
     # Section 2: Window Manager Tools
-    'brightnessctl'          # Backlight control
+    # 'brightnessctl'          # Backlight control
     'i3-gaps'                # Tiling window manager
     'rofi'                   # Application launcher
     'dmen'                   # Dynamic menu
@@ -35,7 +35,7 @@ PKGS=(
     # Section 3: File Managers
     'thunar'                 # File manager
     'pcmanfm'                # File manager
-    'ranger'                 # File manager
+    'ranger'                 # Terminal file manager
 
     # Section 4: System Utilities
     'network-manager-applet' # Network manager applet
@@ -81,9 +81,9 @@ PKGS=(
     'file-roller'            # Archive manager
 
     # Section 11: Bluetooth and Printer
-    'bluez'                  # Bluetooth stack utilities
-    'bluez-utils'            # Bluetooth stack utilities
-    'blueman'                # Bluetooth manager
+    # 'bluez'                  # Bluetooth stack utilities
+    # 'bluez-utils'            # Bluetooth stack utilities
+    # 'blueman'                # Bluetooth manager
     'cups'                   # Printing system
     'simple-scan'            # Document scanner
 
@@ -116,4 +116,4 @@ for PKG in "${PKGS[@]}"; do
 done
 
 sudo systemctl enable cups
-sudo systemctl enable bluetooth
+# sudo systemctl enable bluetooth
