@@ -37,6 +37,7 @@ cp -r optional/synth-shell ~/.config
 cp optional/.bashrc ~/
 cp optional/.inputrc ~/
 cp config/.fehbg ~/
+cp config/.tmux.conf ~/
 cp -r scripts ~/
 chmod +x ~/.config/i3/autostart.sh
 chmod +x ~/.config/i3/scripts/*
