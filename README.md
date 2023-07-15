@@ -31,9 +31,9 @@ The script installs the necessary packages and applications required for daily d
 ## Previews
 
 ![Screenshot 1](%5Bign%5D/s1.png)
-![Screenshot 1](%5Bign%5D/s2.png)
-![Screenshot 1](%5Bign%5D/s3.png)
-![Screenshot 1](%5Bign%5D/s4.png)
+![Screenshot 2](%5Bign%5D/s2.png)
+![Screenshot 3](%5Bign%5D/s3.png)
+![Screenshot 4](%5Bign%5D/s4.png)
 
 ______________________________________________________________________
 
