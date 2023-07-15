@@ -1,5 +1,4 @@
 # zathurarc
-set font "DejaVu Sans"
 set scroll-step 120
 
 # colors
@@ -23,9 +22,10 @@ map - zoom out
 map r reload
 map p print
 map R rotate
-unmap f
-map f toggle_fullscreen
-map [fullscreen] f toggle_fullscreen
+unmap <C-f>
+map <C-f> toggle_fullscreen
+map [fullscreen] <C-f> toggle_fullscreen
+
 map <C-q> quit
 
 # Navigation
@@ -34,18 +34,5 @@ map k scroll up
 map h scroll left
 map l scroll right
 
-# Bookmarks
-# map m exec set bookmark
-# map <C-1> exec "goto 1"
-# map <C-2> exec "goto 2"
-# map <C-3> exec "goto 3"
-# map <C-4> exec "goto 4"
-# map <C-5> exec "goto 5"
-# map <C-6> exec "goto 6"
-# map <C-7> exec "goto 7"
-# map <C-8> exec "goto 8"
-# map <C-9> exec "goto 9"
-# map <C-0> exec "goto 10"
-
 set selection-clipboard clipboard
-
+set sandbox none
