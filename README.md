@@ -99,7 +99,7 @@ ls
 
 ### Window Manager Keybindings:
 
-- super + shift + h: Opens the Arch-Z Guide
+- super + shift + h: Opens the this Guide
 - super + Escape: Reloads sxhkd config
 - super + shift + c: Reloads the i3 window manager configuration
 - super + shift + r: Restarts the i3 window manager
@@ -109,13 +109,14 @@ ls
 ### Application Keybindings:
 
 - super + Return (Enter): Launches kitty terminal
-- super + shift + Return (Enter): Launches alacritty terminal in floating mode
+- super + shift + Return (Enter): Launches alacritty terminal in scratchpad mode
 - super + p: Opens rofi application
 - alt + w: Opens rofi (show mode)
 - super + n: Opens pcmanfm file manager
 - super + r: Opens ranger file manager
-- super + w: Launches Brave Browser
 - super + c: Launches VSCode
+- super + w: Launches Brave Browser
+- super + s: Launches FileZilla
 - super + t: Launches Telegram Desktop
 - Print (Impr écran Syst): Opens flameshot screenshot tool (GUI mode)
 
@@ -157,11 +158,15 @@ ls
 
 ### Additional Keybindings:
 
-- alt + x : Opens ranger in ~/Downloads/Watch (Where I keep all the courses and videos I need to learn from), (not created by default)
+- alt + x: Opens ranger in ~/Downloads/Watch (Where I keep all the courses and videos I need to learn from), (not created by default)
 - alt + c: Opens the config files that I edit frequently
 - alt + b: Opens my bookmarks (add yours inside ~/config/bookmarks.txt)
-- alt + s : Opens my Work/Studies Schedule (Create your own schedule in ~/Pictures/schedule.png)
-- F1 : Changing the wallpaper for the main monitor (Add your wallpapers in ~/.config/wallpapers/)
+- alt + s: Opens my Work/Studies Schedule (Create your own schedule in ~/Pictures/schedule.png)
+- alt + y: Runs the ~/.config/scripts/mpv-youtube.sh script that plays youtube videos using mpv (you must copy first the URL of a youtube video)
+- alt + shift + y: Runs the ~/.config/scripts/web_blocker.sh script that temporarily blocks a specific website (Youtube by default)
+- alt + shift + n: Runs the ~/.config/scripts/c/new_project.sh script to create a new C project
+- alt + shift + o: Runs the ~/.config/scripts/c/old_project.sh to enter the existing C projects
+- F1: Changing the wallpaper for the main monitor (Add your wallpapers in ~/.config/wallpapers/)
 - F2: Changing the wallpaper for two monitors
 
 ### Gaps Keybindings:
