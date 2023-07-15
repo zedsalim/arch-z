@@ -180,5 +180,5 @@ ls
 
 ### System Keybindings:
 
-- super + shift + b: Reboots the system (sudo reboot)
-- super + shift + s: Shuts down the system (sudo shutdown now)
+- super + shift + b: Reboots the system
+- super + shift + s: Shuts down the system
