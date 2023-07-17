@@ -34,6 +34,12 @@ alt + shift + y
 alt + z 
 	source ~/.config/scripts/bookmark_pdf.sh
 
+alt + m 
+	/mnt/FILES/Files/Docs/sftp_m.sh
+
+alt + t 
+	/mnt/FILES/Files/Docs/sftp_s.sh
+
 alt + p 
   pavucontrol
 
