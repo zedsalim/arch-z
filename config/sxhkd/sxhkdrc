@@ -14,7 +14,7 @@ alt + shift + o
 	 ~/.config/scripts/c/old_project.sh
 
 alt + s
-	feh -F "$HOME/Pictures/schedule.png"
+	feh -F "/mnt/FILES/My_Stuff/schedule.png"
 
 alt + b 
 	~/.config/scripts/bookmarks.sh
@@ -67,7 +67,7 @@ super + s
   filezilla
 
 super + w 
-  brave
+  chromium
 
 super + c 
 	code-oss

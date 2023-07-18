@@ -10,7 +10,7 @@ makepkg -si
 # sudo systemctl enable ly.service
 
 # Installing dependencies for LightDM Console Manager
-sudo pacman -S lightdm lightdm-gtk-greeter
+sudo pacman -S lightdm lightdm-gtk-greeter --noconfirm
 sudo systemctl enable lightdm
 
 # Configure xsessions
@@ -34,7 +34,7 @@ touch .xinitrc
 echo "exec i3" > .xinitrc
 
 # Media player
-yay -S mpv
+yay -S  mpv --noconfirm
 
 # Video-sharing websites playback
-yay -S yt-dlp
+yay -S yt-dlp  --noconfirm

@@ -1,1 +1,1 @@
-zed ALL=(ALL) NOPASSWD: /home/zed/.config/scripts/yt_blocker.sh
+zed ALL=(ALL) NOPASSWD: /home/zed/.config/scripts/web_blocker.sh
