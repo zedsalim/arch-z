@@ -33,9 +33,6 @@ cd
 touch .xinitrc
 echo "exec i3" > .xinitrc
 
-# Installing Brave Browser
-yay -S brave-bin
-
 # Media player
 yay -S mpv
 

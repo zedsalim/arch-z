@@ -2,7 +2,7 @@ super + shift + h
   zathura "$HOME/.config/guide.pdf"
 
 alt + x
-  kitty -e "ranger" ~/Downloads/Watch
+  kitty -e "ranger" /mnt/FILES/My_Stuff/Watch
 
 alt + c
 	kitty -e ~/.config/scripts/conf.sh
@@ -17,38 +17,38 @@ alt + s
 	feh -F "$HOME/Pictures/schedule.png"
 
 alt + b 
-	source ~/.config/scripts/bookmarks.sh
+	~/.config/scripts/bookmarks.sh
 
 alt + h 
-	/mnt/FILES/Files/Docs/home-server.sh
+	/mnt/FILES/My_Stuff/home-server.sh
 
 alt + l
 	/mnt/FILES/Files/My_Stuff/mytodo/todo
 
 alt + y 
-	source ~/.config/scripts/mpv-youtube.sh
+	~/.config/scripts/mpv-youtube.sh
 
 alt + shift + y
-	sudo /home/zed/.config/scripts/yt_blocker.sh
+	sudo /home/zed/.config/scripts/web_blocker.sh
 
 alt + z 
-	source ~/.config/scripts/bookmark_pdf.sh
+	~/.config/scripts/bookmark_pdf.sh
 
 alt + m 
-	/mnt/FILES/Files/Docs/sftp_m.sh
+	/mnt/FILES/My_Stuff/sftp_m.sh
 
 alt + t 
-	/mnt/FILES/Files/Docs/sftp_s.sh
+	/mnt/FILES/My_Stuff/sftp_s.sh
 
 alt + p 
   pavucontrol
 
 # BG Selector
 F1
-	source ~/.config/scripts/wallpaper-single-display.sh
+	~/.config/scripts/wallpaper-single-display.sh
 
 F2
-	source ~/.config/scripts/wallpaper-double-display.sh
+	~/.config/scripts/wallpaper-double-display.sh
 
 # Programs
 super + Return

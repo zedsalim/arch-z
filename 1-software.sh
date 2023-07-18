@@ -74,6 +74,7 @@ PKGS=(
     'telegram-desktop'       # Messaging app
     'code'                   # Source code editor
     'git'                    # Version control system
+    'chromium'               # Web Browser
 
     # Section 9: Compression and Archive Tools
     'unzip'                  # Zip file extractor

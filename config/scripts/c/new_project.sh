@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Open Alacritty in the background to list the projects
-alacritty --class AlacrittyC -e sh -c 'exa -1 --group-directories-first /home/zed/Documents/c_projects; exec sh' &
+alacritty --class AlacrittyC -e sh -c 'exa -1 --group-directories-first /mnt/FILES/My_Stuff/c_projects; exec sh' &
 
 # Store the project name entered in Rofi
 name=$(rofi -dmenu -p "Enter the project's name:")
@@ -14,8 +14,8 @@ if [[ -z $name ]]; then
 fi
 
 # Create the project directory
-mkdir "/home/zed/Documents/c_projects/$name"
-cd "/home/zed/Documents/c_projects/$name"
+mkdir "/mnt/FILES/My_Stuff/c_projects/$name"
+cd "/mnt/FILES/My_Stuff/c_projects/$name"
 
 killall -q -9 alacritty
 
