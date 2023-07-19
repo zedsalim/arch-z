@@ -9,14 +9,15 @@ fi
 cd
 cd arch-z/fonts
 tar xzvf Hack-NerdFont.tar.gz
+unzip JetBrainsMono.zip
+mv *ttf ~/.local/share/fonts
 cd Hack-NerdFont/
 mv *ttf ~/.local/share/fonts
 cd ..
-rm -rf
 
 fc-cache -fv
 
 
-sudo pacman -S --noconfirm ttf-font-awesome ttf-dejavu ttf-liberation noto-fonts noto-fonts-emoji ttf-fira-code ttf-ubuntu-font-family ttf-jetbrains-mono
+sudo pacman -S --noconfirm ttf-font-awesome ttf-dejavu ttf-liberation noto-fonts noto-fonts-emoji ttf-fira-code ttf-ubuntu-font-family
 
 yay -S --noconfirm ttf-arabeyes-fonts ttf-ubuntu-arabic
