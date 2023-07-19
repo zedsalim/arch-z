@@ -80,6 +80,7 @@ PKGS=(
     # Section 9: Compression and Archive Tools
     'unzip'                  # Zip file extractor
     'zip'                    # Zip file compressor
+    'p7zip'                  # Zip file compressor
     'file-roller'            # Archive manager
 
     # Section 11: Bluetooth and Printer

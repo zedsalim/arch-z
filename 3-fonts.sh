@@ -8,12 +8,9 @@ fi
 
 cd
 cd arch-z/fonts
-tar xzvf Hack-NerdFont.tar.gz
-unzip JetBrainsMono.zip
-mv *ttf ~/.local/share/fonts
-cd Hack-NerdFont/
-mv *ttf ~/.local/share/fonts
-cd ..
+7z x Hack-NerdFont.7z
+7z x JetBrainsMono.7z
+mv *.ttf ~/.local/share/fonts
 
 fc-cache -fv
 
