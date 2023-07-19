@@ -1,2 +1,2 @@
 #!/bin/bash
-feh --bg-fill /home/zed/.config/wallpapers/moon.jpg --bg-fill /home/zed/.config/wallpapers/moon.jpg
+feh --bg-fill /home/zed/.config/wallpapers/moon.jpg --bg-fill /home/zed/.config/wallpapers/forest.jpg
