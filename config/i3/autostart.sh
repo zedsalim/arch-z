@@ -15,8 +15,8 @@ xfce4-power-manager &
 killall sxhkd
 sxhkd -c ~/.config/sxhkd/sxhkdrc &
 
-killall alacritty
-alacritty --title dropdown -e tmux new-session \; split-window -v &
+pkill -f "kitty --title dropdown -e tmux new-session \; split-window -v"
+kitty --title dropdown -e tmux new-session \; split-window -v &
 
 ibus-daemon -drx &
 
