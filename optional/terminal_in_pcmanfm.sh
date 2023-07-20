@@ -13,7 +13,7 @@ Icon=utilities-terminal
 
 [X-Action-Profile profile-one]
 MimeTypes=inode/directory;
-Exec=alacritty --working-directory %f
+Exec=kitty --working-directory %f
 Name=Default profile" > ~/.local/share/file-manager/actions/terminal.desktop
 
 exit
