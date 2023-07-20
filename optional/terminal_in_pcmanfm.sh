@@ -1,7 +1,6 @@
 #!/bin/bash
 
-sudo su
-
+sudo su <<EOF
 mkdir -p ~/.local/share/file-manager/actions/
 touch ~/.local/share/file-manager/actions/terminal.desktop
 echo "[Desktop Entry]
@@ -15,5 +14,5 @@ Icon=utilities-terminal
 MimeTypes=inode/directory;
 Exec=kitty --working-directory %f
 Name=Default profile" > ~/.local/share/file-manager/actions/terminal.desktop
-
 exit
+EOF
