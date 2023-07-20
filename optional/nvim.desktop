@@ -2,7 +2,7 @@
 Type=Application
 Name=Neovim
 Comment=Edit text files with Neovim
-Exec=alacritty -e sh -c "nvim %F"
+Exec=kitty -e sh -c "nvim %F"
 Icon=nvim
 Terminal=false
 Categories=Utility;TextEditor;
