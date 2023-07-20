@@ -24,7 +24,6 @@ PKGS=(
     'libnotify'              # Notification library
     'picom'                  # Compositor
     'kitty'                  # Terminal emulator
-    'alacritty'              # Terminal emulator
     'lxappearance'           # GTK+ theme switcher
     'wget'                   # File downloader
     'polkit-gnome'           # PolicyKit authentication agent
