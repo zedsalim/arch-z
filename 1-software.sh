@@ -94,6 +94,7 @@ PKGS=(
     'zathura-pdf-poppler'    # PDF viewer
     'qbittorrent'            # BitTorrent client
     'filezilla'              # FTP application
+    'discord'                # Messaging and VoIP social platform
 
     # Section 13: Miscellaneous Utilities
     'xfce4-power-manager'    # Power manager
