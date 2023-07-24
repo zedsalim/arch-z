@@ -75,6 +75,9 @@ super + c
 super + t
   telegram-desktop
 
+super + d
+  discord
+
 Print
   flameshot gui
 
