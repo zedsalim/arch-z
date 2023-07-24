@@ -10,4 +10,6 @@ xdg-mime default nvim.desktop text/markdown
 xdg-mime default nvim.desktop text/x-csrc
 xdg-mime default viewnior.desktop image/png
 xdg-mime default viewnior.desktop image/jpg
+xdg-mime default viewnior.desktop image/jpeg
+xdg-mime default viewnior.desktop image/JPEG
 xdg-mime default viewnior.desktop image/svg+xml
