@@ -20,7 +20,7 @@
 - **Status Bar:** [polybar](https://github.com/polybar/polybar)
 - **Compositor:** [picom](https://github.com/ibhagwan/picom)
 - **Editor:** [neovim](https://github.com/neovim/neovim)
-- **Browser:** [Brave](https://github.com/brave/brave-browser)
+- **Browser:** [Chromium](https://github.com/chromium/chromium)
 - **File Manager:** [pcmanfm](https://github.com/lxde/pcmanfm)
 - **Application Launcher:** [rofi](https://github.com/davatorium/rofi)
 
@@ -97,51 +97,26 @@ ls
 
 ## Keybindings:
 
-### Window Manager Keybindings:
+### System Keybindings:
 
-- super + shift + h: Opens the this Guide
-- super + Escape: Reloads sxhkd config
-- super + shift + c: Reloads the i3 window manager configuration
+- super + shift + h: Opens the Arch-Z Guide
 - super + shift + r: Restarts the i3 window manager
-- super + shift + q: Exits i3 window manager
 - super + q: Closes the current window
+- super + f: Toggles fullscreen mode for the current container
+- super + shift + f: Toggles floating mode for the current container
+- super + shift + b: Reboots the system
+- super + shift + s: Shuts down the system
 
 ### Application Keybindings:
 
 - super + Return (Enter): Launches kitty terminal
-- super + shift + Return (Enter): Launches alacritty terminal in scratchpad mode
+- super + shift + Return (Enter): Launches kitty terminal in scratchpad mode
 - super + p: Opens rofi application
-- alt + w: Opens rofi (show mode)
 - super + n: Opens pcmanfm file manager
 - super + r: Opens ranger file manager
 - super + c: Launches VSCode
-- super + w: Launches Brave Browser
-- super + s: Launches FileZilla
-- super + t: Launches Telegram Desktop
+- super + w: Launches Chromium
 - Print (Impr écran Syst): Opens flameshot screenshot tool (GUI mode)
-
-### Audio Keybindings:
-
-- XF86AudioMute: Toggles audio mute
-- XF86AudioLowerVolume: Decreases audio volume by 5%
-- XF86AudioRaiseVolume: Increases audio volume by 5%
-
-### Brightness Keybindings:
-
-- XF86MonBrightnessDown: Decreases audio volume by 10%
-- XF86MonBrightnessUp: Increases audio volume by 10%
-
-### i3 Window Manager Keybindings:
-
-- super + v: Splits the current container vertically
-- super + h: Splits the current container horizontally
-- super + f: Toggles fullscreen mode for the current container
-- super + shift + f: Toggles floating mode for the current container
-- super + control + space: Toggles focus between tiling and floating mode
-- super + alt + a: Focuses on the parent container
-- alt + shift + s: Change container layout to stacked
-- alt + shift + t: Change container layout to tabbed
-- alt + shift + e: Change container layout to toggle split
 
 ### Workspace Keybindings:
 
@@ -156,29 +131,4 @@ ls
 - super + shift + \[Left, Down, Up, Right\]: Moves the window in the specified direction
 - super + tab: Focuses on the last two workspaces back and forth
 
-### Additional Keybindings:
-
-- alt + x: Opens ranger in ~/Downloads/Watch (Where I keep all the courses and videos I need to learn from), (not created by default)
-- alt + c: Opens the config files that I edit frequently
-- alt + b: Opens my bookmarks (add yours inside ~/config/bookmarks.txt)
-- alt + s: Opens my Work/Studies Schedule (Create your own schedule in ~/Pictures/schedule.png)
-- alt + y: Runs the ~/.config/scripts/mpv-youtube.sh script that plays youtube videos using mpv (you must copy first the URL of a youtube video)
-- alt + shift + y: Runs the ~/.config/scripts/web_blocker.sh script that temporarily blocks a specific website (Youtube by default)
-- alt + shift + n: Runs the ~/.config/scripts/c/new_project.sh script to create a new C project
-- alt + shift + o: Runs the ~/.config/scripts/c/old_project.sh to enter the existing C projects
-- F1: Changing the wallpaper for the main monitor (Add your wallpapers in ~/.config/wallpapers/)
-- F2: Changing the wallpaper for two monitors
-
-### Gaps Keybindings:
-
-- super + shift + n: Adjusts inner and outer gaps simultaneously
-- super + x: Increases outer gaps by 5
-- super + shift + x: Decreases outer gaps by 5
-- super + z: Increases inner gaps by 5
-- super + shift + z: Decreases inner gaps by 5
-- super + ctrl + \[Left, Down, Up, Right\]: Resizes the current window
-
-### System Keybindings:
-
-- super + shift + b: Reboots the system
-- super + shift + s: Shuts down the system
+Discover more keybindings and info in [Arch-Z Guide](https://github.com/zedsalim/arch-z/blob/master/config/guide.pdf).
