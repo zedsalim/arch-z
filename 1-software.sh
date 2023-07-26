@@ -68,6 +68,8 @@ PKGS=(
 
     # Section 7: Sound and Audio
     'pulseaudio'             # Sound server
+    # 'pulseaudio-bluetooth'   # Bluetooth sound server
+    # 'pulseaudio-alsa'        # Sound server
     'alsa-utils'             # Sound utilities
     'pavucontrol'            # Sound mixer
 
