@@ -49,6 +49,7 @@ PKGS=(
     'github-cli'             # Interact with GitHub repositories via command line
     'tmux'                   # Terminal multiplexer
     'openssh'                # Suite of secure networking utilities
+    'rsync'                  # For transferring and synchronizing files
 
     # Section 5: Image and Media Tools
     'feh'                    # Image viewer and wallpaper setter
