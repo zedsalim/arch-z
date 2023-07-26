@@ -63,6 +63,7 @@ bindsym $mod+w exec chromium
 # Scratchpad
 for_window [title="dropdown"] floating enable
 for_window [title="dropdown"] resize set 1200 850
+# for_window [title="dropdown"] resize set 800 650
 for_window [title="dropdown"] move scratchpad
 for_window [title="dropdown"] border pixel 5
 bindsym $mod+Shift+Return [title="dropdown"] scratchpad show; move position center
