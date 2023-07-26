@@ -23,7 +23,7 @@ alt + h
 	/mnt/FILES/My_Stuff/home-server.sh
 
 alt + l
-	/mnt/FILES/Files/My_Stuff/mytodo/todo
+	/mnt/FILES/My_Stuff/mytodo/todo
 
 alt + y 
 	~/.config/scripts/mpv-youtube.sh
