@@ -1,8 +1,8 @@
 #!/bin/bash
 
 sudo su <<EOF
-mkdir -p ~/.local/share/file-manager/actions/
-touch ~/.local/share/file-manager/actions/terminal.desktop
+mkdir -p /home/$USER/.local/share/file-manager/actions/
+touch /home/$USER/.local/share/file-manager/actions/terminal.desktop
 echo "[Desktop Entry]
 Type=Action
 Tooltip=Open Terminal
@@ -13,6 +13,6 @@ Icon=utilities-terminal
 [X-Action-Profile profile-one]
 MimeTypes=inode/directory;
 Exec=kitty --working-directory %f
-Name=Default profile" > ~/.local/share/file-manager/actions/terminal.desktop
+Name=Default profile" > /home/$USER/.local/share/file-manager/actions/terminal.desktop
 exit
 EOF
