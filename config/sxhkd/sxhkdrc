@@ -2,7 +2,7 @@ super + shift + h
   zathura "$HOME/.config/guide.pdf"
 
 alt + x
-  kitty -e "ranger" /mnt/FILES/My_Stuff/Watch
+  kitty -e "ranger" /mnt/FILES/Watch
 
 alt + c
 	kitty -e ~/.config/scripts/conf.sh
