@@ -58,8 +58,7 @@ PKGS=(
     # Section 6: Keybindings and Utilities
     'sxhkd'                  # X hotkey daemon
     'numlockx'               # Num Lock status control
-    'neovim'                 # Text editor
-    'mousepad'               # Text editor
+    'neovim'                 # hyperextensible Vim-based text editor
 
     # Section 7: Sound and Audio
     'pulseaudio'             # Sound server
