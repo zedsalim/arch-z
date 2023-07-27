@@ -1,6 +1,7 @@
 #!/bin/bash
 
 xdg-user-dirs-update
+
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
