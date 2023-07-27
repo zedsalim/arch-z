@@ -5,7 +5,6 @@ PKGS=(
     'xorg'                   # Display server
     'xorg-xinit'             # Xorg initialization scripts
     'xorg-xinput'            # Xorg input device configuration
-    # 'xterm'                # Terminal emulator
     'pam'                    # Pluggable Authentication Modules
     'xcb'                    # X protocol C-language Binding
     'xorg-server'            # Xorg server
@@ -18,7 +17,7 @@ PKGS=(
     # 'brightnessctl'          # Backlight control
     'i3-gaps'                # Tiling window manager
     'rofi'                   # Application launcher
-    'dmen'                   # Dynamic menu
+    'dmenu'                  # Dynamic menu
     'polybar'                # Status bar
     'dunst'                  # Notification daemon
     'libnotify'              # Notification library
@@ -38,10 +37,8 @@ PKGS=(
 
     # Section 4: System Utilities
     'network-manager-applet' # Network manager applet
-    'gnome-disk-utility'     # Disk management utility
     'gparted'                # Partition editor
     'bleachbit'              # System cleaner
-    # 'neofetch'             # System information tool (i'm using ufetch script instead)
     'arandr'                 # Screen layout editor
     'htop'                   # System monitoring tool
     'dbus'                   # Message bus system
@@ -56,8 +53,6 @@ PKGS=(
     'viewnior'               # Image viewer
     'flameshot'              # Screenshot tool
     'sxiv'                   # Image viewer
-    # 'ueberzug'             # Image viewer
-    # 'w3m'                  # Text-based web browser
     'python-pillow'          # Image processing library
 
     # Section 6: Keybindings and Utilities
