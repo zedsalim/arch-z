@@ -2,7 +2,7 @@
 
 # Set default applications for file types
 xdg-mime default org.pwmt.zathura.desktop application/pdf
-xdg-mime default mousepad.desktop text/plain
+xdg-mime default nvim.desktop text/plain
 xdg-mime default code-oss.desktop text/html
 xdg-mime default code-oss.desktop text/css
 xdg-mime default nvim.desktop text/x-shellscript
