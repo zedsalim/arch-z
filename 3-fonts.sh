@@ -14,7 +14,6 @@ mv *.ttf ~/.local/share/fonts
 
 fc-cache -fv
 
-
-sudo pacman -S --noconfirm ttf-font-awesome ttf-dejavu ttf-liberation noto-fonts noto-fonts-emoji ttf-fira-code ttf-ubuntu-font-family
+# sudo pacman -S --noconfirm ttf-font-awesome ttf-dejavu ttf-liberation noto-fonts noto-fonts-emoji ttf-fira-code ttf-ubuntu-font-family
 
 yay -S --noconfirm ttf-arabeyes-fonts ttf-ubuntu-arabic
