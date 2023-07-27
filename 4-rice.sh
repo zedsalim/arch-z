@@ -32,7 +32,6 @@ cp config/picom.conf ~/.config
 cp config/guide.pdf ~/.config
 cp config/pdf_bookmarks.txt ~/.config
 sudo cp config/ufetch /usr/bin/
-sudo cp config/sysfetch /usr/bin/
 cp -r optional/synth-shell ~/.config
 cp optional/.bashrc ~/
 cp optional/.inputrc ~/
