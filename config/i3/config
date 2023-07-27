@@ -23,7 +23,6 @@ smart_borders on
 
 
 font pango:DejaVu Sans Mono 10
-# font pango:monospace 8
 new_window 1pixel
 gaps inner $g_inner
 gaps outer $g_outer
@@ -43,9 +42,7 @@ bindsym $mod+Shift+z	gaps inner current minus 5
 ######################################
 #    	 System keybindings
 
-# Reboot
 bindsym $mod+Shift+b exec "reboot"
-# Power off
 bindsym $mod+Shift+s exec "poweroff"
 
 # change container layout (stacked, tabbed, toggle split)
@@ -62,7 +59,6 @@ bindsym $mod+w exec chromium
 # Scratchpad
 for_window [title="dropdown"] floating enable
 for_window [title="dropdown"] resize set 1200 850
-# for_window [title="dropdown"] resize set 800 650
 for_window [title="dropdown"] move scratchpad
 for_window [title="dropdown"] border pixel 5
 bindsym $mod+Shift+Return [title="dropdown"] scratchpad show; move position center
@@ -86,7 +82,6 @@ for_window [class="Pavucontrol"] floating enable
 for_window [class="qt5ct"] floating enable sticky enable border normal
 for_window [class="Simple-scan"] floating enable border normal
 for_window [class="Todo"] floating enable, resize set 800 800, move position center
-# for_window [class="FileZilla"] floating enable, resize set 1000 1000, move position center
 for_window [class="mpv"] floating enable, resize set 1000 1000, move position center
 for_window [class="qBittorrent"] floating enable sticky enable border normal
 
