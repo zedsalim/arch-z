@@ -6,7 +6,7 @@
 bgdir="$HOME/.config/wallpapers"
 
 # current wallpaper so the lockscreen script will match
-cbg="$HOME/.config/wallpapers/ign_astronaut.png"
+cbg="$HOME/.config/wallpapers/wallpaper.jpg"
 
 
 # reads stdout of sxiv mark after quitting (Mark with m and q to quit)
@@ -21,10 +21,10 @@ choicenum="$(echo "$choice" | wc -l)"
 
 # Check if feh is installed and set the command accordingly
 if [ -x "$(command -v feh)" ]; then
-  set="feh --bg-fill"
+    set="feh --bg-fill"
 else
-  echo "feh is not installed. Please install feh to set wallpapers."
-  exit 1
+    echo "feh is not installed. Please install feh to set wallpapers."
+    exit 1
 fi
 
 $set "$lastwp" && cp "$lastwp" "$cbg"
