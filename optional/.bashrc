@@ -129,10 +129,13 @@ alias s='bash ~/.config/scripts/set-single-display.sh'
 # alias c='bash ~/.config/scripts/c/compile.sh'
 alias c='gcc -Wall -Wextra main.c
 ./a.out'
+alias za='cd ~/Documents/github/zedsalim/arch-z/'
 alias sts='git status'
 alias add='git add .'
 alias cmt='git commit -m'
 alias push='git push'
+alias pi='sudo pacman -S'
+alias pu='sudo pacman -Sy'
 ufetch
 ##-----------------------------------------------------
 ## synth-shell-prompt.sh
