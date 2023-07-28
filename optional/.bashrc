@@ -134,7 +134,6 @@ alias add='git add .'
 alias cmt='git commit -m'
 alias push='git push'
 ufetch
-#neofetch
 ##-----------------------------------------------------
 ## synth-shell-prompt.sh
 if [ -f ~/.config/synth-shell/synth-shell-prompt.sh ] && [ -n "$( echo $- | grep i )" ]; then
