@@ -28,6 +28,9 @@ alt + l
 alt + y 
 	~/.config/scripts/mpv-youtube.sh
 
+alt + d 
+	~/.config/scripts/yt-downloader.sh
+
 alt + shift + y
 	sudo /home/zed/.config/scripts/web_blocker.sh
 
