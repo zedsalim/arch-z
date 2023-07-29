@@ -50,7 +50,6 @@ PKGS=(
 
     # Section 5: Image and Media Tools
     'feh'                    # Image viewer and wallpaper setter
-    'viewnior'               # Image viewer
     'flameshot'              # Screenshot tool
     'sxiv'                   # Image viewer
     'python-pillow'          # Image processing library
