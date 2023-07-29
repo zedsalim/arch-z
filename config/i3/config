@@ -69,9 +69,6 @@ for_window [class="KittyC"] floating enable, move position 0 28, resize set 25 p
 # Set Kitty to floating mode (for sftp)
 for_window [class="KittySftp"] floating enable, move position center, resize set 60 ppt 40 ppt
 
-# Open sxiv in fullscreen mode
-for_window [class="Sxiv"] fullscreen
-
 # Open specific applications in floating mode
 for_window [title="alsamixer"] floating enable border pixel 1
 for_window [class="gnome-disks"] floating enable border pixel 1
