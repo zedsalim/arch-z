@@ -88,13 +88,13 @@ alt + w
  	rofi -show
 
 # Audio Keybindings
-XF86AudioLowerVolume
+super + Next
     pactl set-sink-volume @DEFAULT_SINK@ -5%
 
-XF86AudioRaiseVolume
+super + Prior
     pactl set-sink-volume @DEFAULT_SINK@ +5%
 
-XF86AudioMute
+super + BackSpace
     pactl set-sink-mute @DEFAULT_SINK@ toggle
 
 # Brightness bindings
