@@ -11,7 +11,7 @@ cbg="$HOME/.config/wallpapers/wallpaper.jpg"
 
 # reads stdout of sxiv mark after quitting (Mark with m and q to quit)
 # (currently reads last wallpaper selected no matter how many you select)
-choice="$(sxiv -t -o -r "$bgdir")"
+choice="$(sxiv -ft -o -r "$bgdir")"
 choicenum="$(echo "$choice" | wc -l)"
 
 # If no choice for wallpaper was made, exit the script
