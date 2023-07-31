@@ -127,7 +127,7 @@ alias r='ranger'
 alias d='bash ~/.config/scripts/set-double-display.sh'
 alias s='bash ~/.config/scripts/set-single-display.sh'
 # alias c='bash ~/.config/scripts/c/compile.sh'
-alias c='gcc -Wall -Wextra main.c
+alias c='gcc -Wall -Wextra -lm main.c
 ./a.out'
 alias za='cd ~/Documents/github/zedsalim/arch-z/'
 alias sts='git status'
