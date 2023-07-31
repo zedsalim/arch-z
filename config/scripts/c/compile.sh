@@ -32,5 +32,5 @@ if [ -f a.out ]; then
 fi
 clear
 # Compile and run main.c
-gcc -Wall -Wextra main.c
+gcc -Wall -Wextra -lm main.c
 ./a.out
