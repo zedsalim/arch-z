@@ -8,3 +8,4 @@ set completion-ignore-case on
 "\C-h":"cd ~\n"
 "\C-f":"cd ~/.config/\n"
 "\C-g":"nvim ~/Documents/github/\n"
+"\C-e":"exit\n"
