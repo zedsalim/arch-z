@@ -4,6 +4,7 @@
 cd
 mkdir ~/.themes
 mkdir ~/.icons
+pkdir ~/phone_mount
 cd arch-z/theme
 
 tar xf Sunity-cursors.tar.gz
