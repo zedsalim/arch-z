@@ -28,6 +28,9 @@ alt + l
 alt + y 
 	~/.config/scripts/mpv-youtube.sh
 
+alt + u 
+	~/.config/scripts/usb_mount.sh
+
 alt + d 
 	kitty --class KittySftp -e ~/.config/scripts/yt-downloader.sh
 
