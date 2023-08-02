@@ -39,3 +39,6 @@ yay -S  mpv --noconfirm
 
 # Video-sharing websites playback
 yay -S yt-dlp  --noconfirm
+
+# MTP Android device mounting tool
+yay -S jmtpfs --noconfirm
