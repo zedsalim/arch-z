@@ -49,45 +49,46 @@ safepipe() { "$@"; test $? = 0 -o $? = 141; }
 # Image previews, if enabled in ranger.
 if [ "$preview_images" = "True" ]; then
     case "$mimetype" in
-        # Image previews for SVG files, disabled by default.
+            # Image previews for SVG files, disabled by default.
         image/svg+xml)
-           convert "$path" "$cached" && exit 6 || exit 1;;
-        # Image previews for image files. w3mimgdisplay will be called for all
-        # image files (unless overriden as above), but might fail for
-        # unsupported types.
+            convert "$path" "$cached" && exit 6 || exit 1 ;;
+            # Image previews for image files. w3mimgdisplay will be called for all
+            # image files (unless overriden as above), but might fail for
+            # unsupported types.
         image/*)
-            exit 7;;
-        # Image preview for video, disabled by default.:
+            exit 7 ;;
+            # Image preview for video, disabled by default.:
         video/*)
-            ffmpegthumbnailer -i "$path" -o "$cached" -s 0 && exit 6 || exit 1;;
+            ffmpegthumbnailer -i "$path" -o "$cached" -s 0 && exit 6 || exit 1 ;;
     esac
 fi
 
 case "$extension" in
-    # Archive extensions:
-    a|ace|alz|arc|arj|bz|bz2|cab|cpio|deb|gz|jar|lha|lz|lzh|lzma|lzo|\
-    rpm|rz|t7z|tar|tbz|tbz2|tgz|tlz|txz|tZ|tzo|war|xpi|xz|Z|zip)
+        # Archive extensions:
+        a|ace|alz|arc|arj|bz|bz2|cab|cpio|deb|gz|jar|lha|lz|lzh|lzma|lzo|\
+        rpm|rz|t7z|tar|tbz|tbz2|tgz|tlz|txz|tZ|tzo|war|xpi|xz|Z|zip)
         try als "$path" && { dump | trim; exit 0; }
         try acat "$path" && { dump | trim; exit 3; }
         try bsdtar -lf "$path" && { dump | trim; exit 0; }
-        exit 1;;
+        exit 1 ;;
     rar)
         # avoid password prompt by providing empty password
-        try unrar -p- lt "$path" && { dump | trim; exit 0; } || exit 1;;
+        try unrar -p- lt "$path" && { dump | trim; exit 0; } || exit 1 ;;
     7z)
         # avoid password prompt by providing empty password
-        try 7z -p l "$path" && { dump | trim; exit 0; } || exit 1;;
-    # PDF documents:
+        try 7z -p l "$path" && { dump | trim; exit 0; } || exit 1 ;;
+        # PDF documents:
     pdf)
-        try pdftotext -l 10 -nopgbrk -q "$path" - && \
-            { dump | trim | fmt -s -w $width; exit 0; } || exit 1;;
-    # BitTorrent Files
+        # try pdftotext -l 10 -nopgbrk -q "$path" - && \
+            #     { dump | trim | fmt -s -w $width; exit 0; } || exit 1 ;;
+        try pdftoppm -jpeg -singlefile "$path" "${cached//.jpg}" && exit 6 || exit 1 ;;
+        # BitTorrent Files
     torrent)
-        try transmission-show "$path" && { dump | trim; exit 5; } || exit 1;;
-    # ODT Files
+        try transmission-show "$path" && { dump | trim; exit 5; } || exit 1 ;;
+        # ODT Files
     odt|ods|odp|sxw)
-        try odt2txt "$path" && { dump | trim; exit 5; } || exit 1;;
-    # HTML Pages:
+        try odt2txt "$path" && { dump | trim; exit 5; } || exit 1 ;;
+        # HTML Pages:
     htm|html|xhtml)
         try w3m    -dump "$path" && { dump | trim | fmt -s -w $width; exit 4; }
         try lynx   -dump "$path" && { dump | trim | fmt -s -w $width; exit 4; }
@@ -96,7 +97,7 @@ case "$extension" in
 esac
 
 case "$mimetype" in
-    # Syntax highlight for text files:
+        # Syntax highlight for text files:
     text/* | */xml)
         if [ "$(tput colors)" -ge 256 ]; then
             pygmentize_format=terminal256
@@ -107,15 +108,15 @@ case "$mimetype" in
         fi
         try safepipe highlight --out-format=${highlight_format} "$path" && { dump | trim; exit 5; }
         try safepipe pygmentize -f ${pygmentize_format} "$path" && { dump | trim; exit 5; }
-        exit 2;;
-    # Ascii-previews of images:
+        exit 2 ;;
+        # Ascii-previews of images:
     image/*)
-        img2txt --gamma=0.6 --width="$width" "$path" && exit 4 || exit 1;;
-    # Display information about media files:
+        img2txt --gamma=0.6 --width="$width" "$path" && exit 4 || exit 1 ;;
+        # Display information about media files:
     video/* | audio/*)
         exiftool "$path" && exit 5
         # Use sed to remove spaces so the output fits into the narrow window
-        try mediainfo "$path" && { dump | trim | sed 's/  \+:/: /;';  exit 5; } || exit 1;;
+        try mediainfo "$path" && { dump | trim | sed 's/  \+:/: /;';  exit 5; } || exit 1 ;;
 esac
 
 exit 1
