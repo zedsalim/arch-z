@@ -31,8 +31,6 @@ PKGS=(
     'ntfs-3g'                # Managing NTFS file systems
 
     # Section 3: File Managers
-    'thunar'                 # File manager
-    'pcmanfm'                # File manager
     'ranger'                 # Terminal file manager
 
     # Section 4: System Utilities
