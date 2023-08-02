@@ -63,9 +63,6 @@ super + p
 super + r
   kitty -e "ranger"
 
-super + n
-	pcmanfm
-
 super + s 
   filezilla
 
