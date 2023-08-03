@@ -45,6 +45,8 @@ PKGS=(
     'tmux'                   # Terminal multiplexer
     'openssh'                # Suite of secure networking utilities
     'rsync'                  # For transferring and synchronizing files
+    'fzf'                    # Fuzzy finder
+    'ghostscript'            # Interpreter for PostScript and PDF files
 
     # Section 5: Image and Media Tools
     'feh'                    # Image viewer and wallpaper setter
@@ -87,6 +89,7 @@ PKGS=(
     'galculator'             # Calculator
     'zathura-pdf-poppler'    # PDF viewer
     'qbittorrent'            # BitTorrent client
+    'transmission-cli'       # command-line BitTorrent client
     'filezilla'              # FTP application
     'discord'                # Messaging and VoIP social platform
 
@@ -98,12 +101,12 @@ PKGS=(
     'jdk-openjdk'            # Java Development Kit
 
     # Section 14: Drivers
-    'nvidia'
+    # 'nvidia'
     # 'xf86-input-libinput'
     # 'xf86-input-evdev'
     # 'xf86-video-fbdev'
     # 'xf86-video-intel'
-    # 'xf86-video-nouveau'
+    'xf86-video-nouveau'
     # 'xf86-video-vmware'
 )
 
