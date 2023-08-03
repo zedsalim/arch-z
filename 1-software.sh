@@ -31,7 +31,7 @@ PKGS=(
     'ntfs-3g'                # Managing NTFS file systems
 
     # Section 3: File Managers
-    'ranger'                 # Terminal file manager
+    'vifm'                 # Terminal file manager
 
     # Section 4: System Utilities
     'network-manager-applet' # Network manager applet
