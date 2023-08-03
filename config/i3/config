@@ -9,7 +9,7 @@ exec_always feh --bg-fill ~/.config/wallpapers/wallpaper.jpg
 exec_always --no-startup-id ~/.config/i3/autostart.sh
 exec --no-startup-id ~/.config/scripts/help_notification.sh
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-# exec --no-startup-id ~/.config/scripts/resolution.sh
+exec --no-startup-id ~/.config/scripts/resolution.sh
 ######################################
 #              Vars
 
