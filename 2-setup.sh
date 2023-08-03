@@ -2,10 +2,6 @@
 
 xdg-user-dirs-update
 
-git clone https://aur.archlinux.org/yay.git
-cd yay
-makepkg -si
-
 # Installing dependencies for Ly Console Manager (uncomment if you don't want LightDm)
 # yay -S ly
 # sudo systemctl enable ly.service
@@ -33,12 +29,3 @@ sudo cp ./temp /usr/share/xsessions/i3.desktop;rm ./temp
 cd
 touch .xinitrc
 echo "exec i3" > .xinitrc
-
-# Media player
-yay -S  mpv --noconfirm
-
-# Video-sharing websites playback
-yay -S yt-dlp  --noconfirm
-
-# MTP Android device mounting tool
-yay -S jmtpfs --noconfirm

@@ -1,5 +1,9 @@
 #!/bin/bash
 
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+
 PKGS=(
     # Section 1: Xorg and Window Manager
     'xorg'                   # Display server
@@ -114,6 +118,15 @@ for PKG in "${PKGS[@]}"; do
     echo "INSTALLING: ${PKG}"
     sudo pacman -S "$PKG" --noconfirm --needed
 done
+
+# Media player
+yay -S  mpv --noconfirm
+
+# Video-sharing websites playback
+yay -S yt-dlp  --noconfirm
+
+# MTP Android device mounting tool
+yay -S jmtpfs --noconfirm
 
 sudo systemctl enable cups
 # sudo systemctl enable bluetooth
