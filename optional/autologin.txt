@@ -1,6 +1,6 @@
 # LoghtDM Autologin
-groupadd -r autologin
-gpasswd -a zed autologin
+sudo groupadd -r autologin
+sudo gpasswd -a zed autologin
 
 sudo vim /etc/lightdm/lightdm.conf
 [Seat:*]
