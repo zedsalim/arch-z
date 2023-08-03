@@ -2,7 +2,7 @@ super + shift + h
   zathura "$HOME/.config/guide.pdf"
 
 alt + x
-  kitty -e "ranger" /mnt/FILES/Watch
+  kitty -e "vifm" /mnt/FILES/Watch
 
 alt + c
 	kitty -e ~/.config/scripts/conf.sh
@@ -63,8 +63,8 @@ super + Return
 super + p
   rofi -show drun -line padding 4 -hide-scrollbar -show-icons
    	
-super + r
-  kitty -e "ranger"
+super + n
+  kitty -e "vifm" /home/zed/ /mnt/FILES/
 
 super + s 
   filezilla
