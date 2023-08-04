@@ -597,13 +597,13 @@ nnoremap <a-o> :sync %c<cr>
 nnoremap <c-u> <c-w>x
 
 " create new tab
-nnoremap <space>t :tabnew<cr>:view!<cr>
+nnoremap <c-t> :tabnew<cr>:view!<cr>
 
 " switch to previus tab 
-nnoremap <space>j :tabprevious<cr>
+nnoremap <c-b> :tabprevious<cr>
 
 " switch to next tab
-nnoremap <space>k :tabnext<CR>
+nnoremap <c-n> :tabnext<CR>
 
 " Ctrl + q to exit
 nnoremap <C-q> :q!<CR>
