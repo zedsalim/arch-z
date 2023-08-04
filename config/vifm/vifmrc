@@ -435,8 +435,8 @@ filextype */
 
 " enable exa in folder preview
 
-fileviewer */ exa --colour=always --group-directories-first
-fileviewer .*/ exa --colour=always --group-directories-first
+fileviewer */ exa -a --colour=always --group-directories-first
+fileviewer .*/ exa -a --colour=always --group-directories-first
 " fileview */ tree %c
 
 
