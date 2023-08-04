@@ -156,3 +156,7 @@ lzg() {
     git commit -m "$1"
     git push
 }
+fc() { du -a ~/.config/* | awk '{print $2}' | fzf | xargs -r $EDITOR;}
+
+export EDITOR=nvim
+export BROWSER=chromium
