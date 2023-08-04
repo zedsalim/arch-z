@@ -164,6 +164,7 @@ command! xz tar -cJvf %c.tar.xz %f
 command! uxz tar -xJvf %c
 command! utar tar -xvf %c
 command! ugz tar -xzvf %c
+command! send rsync -avr --progress %c ~/phone_mount/Phone/Download/
 command! run !! ./%f
 command! make !!make %a
 command! mkcd :mkdir %a | cd %a
