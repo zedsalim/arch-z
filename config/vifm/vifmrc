@@ -500,6 +500,9 @@ nnoremap cd :mkdir<space>
 nnoremap yp :!echo %c:p %i | xclip -i -r -selection 'clipboard' -f 
             \| xclip -i -r -selection 'primary'<cr>
 
+" coppy current file name 
+nnoremap yn :!echo -n %c | xclip -selection clipboard %i<cr>:echo expand('%"c') "is yanked to clipboard"<cr>
+
 " Start shell in current directory
 nnoremap s :shell<cr>
 
