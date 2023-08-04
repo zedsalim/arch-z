@@ -154,6 +154,13 @@ mark k /mnt/FILES/Courses/UNIV_COURS/L2/L2/L2-KHBICH/S4/
 "  %u uses command's output to build a file list
 "  see `:help vifm-macros` and `:help vifm-filename-modifiers` for more
 
+command! itp !! /mnt/FILES/My_Stuff/Files/usefull_scripts/imgs_to_pdf.sh %f
+command! pti !! /mnt/FILES/My_Stuff/Files/usefull_scripts/pdf_to_img.sh %f
+command! cpdf !! /mnt/FILES/My_Stuff/Files/usefull_scripts/compress_pdfs.sh %d
+command! cimg !! /mnt/FILES/My_Stuff/Files/usefull_scripts/compress_imgs.sh %d
+command! mpdf !! /mnt/FILES/My_Stuff/Files/usefull_scripts/merge_pdfs.sh %a %f
+command! mimg !! /mnt/FILES/My_Stuff/Files/usefull_scripts/merge_imgs_to_pdf.sh %a %f
+
 command! df df -h %m 2> /dev/null
 command! diff vim -d %f %F
 command! zip zip -r %c.zip %f
@@ -486,6 +493,7 @@ fileviewer .*/ exa -a --colour=always --group-directories-first
 " ------------------------------------------------------------------------------
 " Sample keyboard mappings
 " ------------------------------------------------------------------------------
+
 
 " Toggle hidden files
 nnoremap . za
