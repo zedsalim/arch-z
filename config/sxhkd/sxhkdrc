@@ -66,9 +66,6 @@ super + p
 super + n
   kitty -e "vifm" /home/zed/ /mnt/FILES/
 
-super + s 
-  filezilla
-
 super + w 
   chromium
 
