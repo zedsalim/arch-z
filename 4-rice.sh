@@ -27,7 +27,6 @@ cp -r config/rofi/ ~/.config
 # cp -r config/ranger/ ~/.config
 cp -r config/vifm/ ~/.config
 cp -r config/polybar/ ~/.config
-# cp -r config/pcmanfm/ ~/.config
 cp -r config/zathura/ ~/.config
 cp -r config/kitty/ ~/.config
 cp config/picom.conf ~/.config
