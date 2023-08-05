@@ -569,6 +569,9 @@ nnoremap A cw
 nnoremap cw cW 
 nnoremap cW cw
 
+" Change "-" with "- [Watched]"
+nnoremap W :s?-?- [Watched] <cr>  
+
 " As above, but without the file extension
 " nnoremap I cW<c-a>
 " nnoremap cc cW<c-u>
