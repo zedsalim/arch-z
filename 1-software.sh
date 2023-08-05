@@ -75,7 +75,6 @@ PKGS=(
     # Section 8: Development Tools
     'telegram-desktop'       # Messaging app
     'code'                   # Source code editor
-    'git'                    # Version control system
     'chromium'               # Web Browser
 
     # Section 9: Compression and Archive Tools
