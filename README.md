@@ -21,7 +21,7 @@
 - **Compositor:** [picom](https://github.com/ibhagwan/picom)
 - **Editor:** [neovim](https://github.com/neovim/neovim)
 - **Browser:** [Chromium](https://github.com/chromium/chromium)
-- **File Manager:** [pcmanfm](https://github.com/lxde/pcmanfm)
+- **File Manager:** [vifm](https://github.com/vifm/vifm)
 - **Application Launcher:** [rofi](https://github.com/davatorium/rofi)
 
 This project is a shell script that automates the post installation process for a minimal Arch system, along with the i3 window manager. It aims to provide an easy and efficient way to configure an arch desktop environment with a Stylish lightweight and customizable window manager.
@@ -112,8 +112,7 @@ ls
 - super + Return (Enter): Launches kitty terminal
 - super + shift + Return (Enter): Launches kitty terminal in scratchpad mode
 - super + p: Opens rofi application
-- super + n: Opens pcmanfm file manager
-- super + r: Opens ranger file manager
+- super + n: Opens vifm file manager
 - super + c: Launches VSCode
 - super + w: Launches Chromium
 - Print (Impr écran Syst): Opens flameshot screenshot tool (GUI mode)
