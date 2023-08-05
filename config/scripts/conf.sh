@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define the choices
-choices=("i3-config" "i3-workspaces" "i3-colors" "sxhkd" "polybar" "alacritty" "kitty" "ranger"  "GitHub" "scripts" "themes")
+choices=("i3-config" "i3-workspaces" "i3-colors" "sxhkd" "polybar" "kitty" "vifm"  "github" "scripts" )
 
 # Prompt the user to select a choice using rofi
 selected_choice=$(printf '%s\n' "${choices[@]}" | rofi -dmenu -p "Select a config file:")
@@ -23,23 +23,17 @@ case $selected_choice in
     "polybar")
         config_file="$HOME/.config/polybar/config"
         ;;
-    "alacritty")
-        config_file="$HOME/.config/alacritty/alacritty.yml"
-        ;;
     "kitty")
         config_file="$HOME/.config/kitty/kitty.conf"
         ;;
-    "ranger")
-        config_file="$HOME/.config/ranger/rc.conf"
+    "vifm")
+        config_file="$HOME/.config/vifm/vifmrc"
         ;;
-    "GitHub")
-        config_file="ranger $HOME/Documents/GitHub/"
+    "github")
+        config_file="vifm $HOME/Documents/github/"
         ;;
     "scripts")
-        config_file="ranger $HOME/.config/scripts"
-        ;;
-    "themes")
-        config_file="ranger $HOME/.config/scripts/themes"
+        config_file="vifm $HOME/.config/scripts"
         ;;
     *)
         echo "Invalid choice"
@@ -48,8 +42,8 @@ case $selected_choice in
 esac
 
 # Check if the config file exists
-if [[ $config_file == ranger* ]]; then
-    # Open the selected directory with Ranger
+if [[ $config_file == vifm* ]]; then
+    # Open the selected directory with Vifm
     $config_file
 else
     # Open the selected config file with Vim
