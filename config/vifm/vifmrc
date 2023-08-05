@@ -161,6 +161,7 @@ command! cimg !! ~/.config/scripts/usefull_scripts/compress_imgs.sh %d
 command! mpdf !! ~/.config/scripts/usefull_scripts/merge_pdfs.sh %a %f
 command! mimg !! ~/.config/scripts/usefull_scripts/merge_imgs_to_pdf.sh %a %f
 
+command! v nvim %c
 command! df df -h %m 2> /dev/null
 command! diff vim -d %f %F
 command! zip zip -r %c.zip %f
@@ -493,7 +494,6 @@ fileviewer .*/ exa -a --colour=always --group-directories-first
 " ------------------------------------------------------------------------------
 " Sample keyboard mappings
 " ------------------------------------------------------------------------------
-
 
 " Toggle hidden files
 nnoremap . za
