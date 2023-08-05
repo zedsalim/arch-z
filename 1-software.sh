@@ -52,6 +52,7 @@ PKGS=(
     'fzf'                    # Fuzzy finder
     'ghostscript'            # Interpreter for PostScript and PDF files
     'pdftk'                  # Toolkit for manipulating PDFs
+    'imagemagick'            # Image manipulation software
 
     # Section 5: Image and Media Tools
     'feh'                    # Image viewer and wallpaper setter
