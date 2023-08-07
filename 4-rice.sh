@@ -55,3 +55,4 @@ source optional/keyboard_layout.sh
 source optional/nvim.sh
 source optional/default_apps.sh
 source optional/nvim-desktop.sh
+source optional/remap_keys.sh # This script will remap Caps Lock to Esc and Esc to Caps Lock.
