@@ -163,6 +163,7 @@ command! mimg !! ~/.config/scripts/usefull_scripts/merge_imgs_to_pdf.sh %a %f
 command! mvimg sxiv -to %d | tee >(grep -oE '[^ ]+\.(jpg|jpeg|png|JPG|gif)$' > marked_images.txt) | xargs -I{} mv {} %a 
 command! flip convert %f -rotate 90 %f 
 command! v nvim %c
+command! c code-oss %c
 command! df df -h %m 2> /dev/null
 command! diff vim -d %f %F
 command! zip zip -r %c.zip %f
