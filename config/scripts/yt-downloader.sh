@@ -3,53 +3,70 @@
 
 cd /home/zed/Downloads/
 
-# Function to download video with the specified quality
-download_video() {
+# Function to download video or playlist
+download() {
     local url="$1"
-    local quality="$2"
-    echo "Downloading video with $quality resolution..."
-    yt-dlp -f "bestvideo[height<=$quality][ext=mp4]+bestaudio[ext=m4a]/best[height<=$quality][ext=mp4]/best" -o "%(title)s.%(ext)s" "$url"
-}
+    local video_quality="$2"
+    local audio_quality="$3"
+    local output_format="$4"
 
-# Function to download playlist
-download_playlist() {
-    local url="$1"
-    echo "Downloading playlist..."
-    yt-dlp -o "%(playlist_index)s - %(title)s.%(ext)s" "$url"
+    echo "Downloading..."
+    yt-dlp -f "$video_quality+$audio_quality" -o "$output_format" "$url"
 }
-
-# Check if xclip is installed
-if ! command -v xclip &> /dev/null; then
-    echo "xclip is not installed. Please install it using 'sudo apt-get install xclip' (for Ubuntu/Debian) or appropriate package manager for your distribution."
-    exit 1
-fi
 
 # Read the video URL from the clipboard
 url=$(xclip -o -selection clipboard)
 
-if [ -z "$url" ]; then
-    echo "No video URL found in the clipboard. Please copy a video URL and run the script again."
-    exit 1
+# Check for audio quality
+audio="599"
+yt-dlp -F "$url" | grep -q "599"
+if [ $? -ne 0 ]; then
+    audio="bestaudio"
 fi
 
-echo "Do you want to download a single video or a playlist?"
-echo "Enter '1' for a single video or '2' for a playlist: "
-read choice
+# Check for video quality options
+video_quality="299"
+output_format_video="%(title)s.%(ext)s"
+output_format_playlist="%(playlist_index)s - %(title)s.%(ext)s"
 
-if [ "$choice" = "1" ]; then
-    preferred_quality=720
+yt-dlp -F "$url" | grep -q "299"
+if [ $? -eq 0 ]; then
+    echo "Do you want to download a single video or a playlist?"
+    echo "Enter '1' for a single video or '2' for a playlist: "
+    read choice
 
-    # Check if the video is available in the preferred quality
-    yt-dlp -F "$url" | grep -q "$preferred_quality"
-
-    if [ $? -eq 0 ]; then
-        download_video "$url" "$preferred_quality"
+    if [ "$choice" = "1" ]; then
+        download "$url" "$video_quality" "$audio" "$output_format_video"
+    elif [ "$choice" = "2" ]; then
+        download "$url" "$video_quality" "$audio" "$output_format_playlist"
     else
-        echo "720p resolution not available. Downloading in 480p..."
-        download_video "$url" 480
+        echo "Invalid choice. Please enter '1' or '2'."
     fi
-elif [ "$choice" = "2" ]; then
-    download_playlist "$url"
+elif yt-dlp -F "$url" | grep -q "302"; then
+    video_quality="302"
+    echo "Do you want to download a single video or a playlist?"
+    echo "Enter '1' for a single video or '2' for a playlist: "
+    read choice
+
+    if [ "$choice" = "1" ]; then
+        download "$url" "$video_quality" "$audio" "$output_format_video"
+    elif [ "$choice" = "2" ]; then
+        download "$url" "$video_quality" "$audio" "$output_format_playlist"
+    else
+        echo "Invalid choice. Please enter '1' or '2'."
+    fi
 else
-    echo "Invalid choice. Please enter '1' or '2'."
+    echo "Quality options not available. Downloading best available quality..."
+    video_quality="bestvideo"
+    echo "Do you want to download a single video or a playlist?"
+    echo "Enter '1' for a single video or '2' for a playlist: "
+    read choice
+
+    if [ "$choice" = "1" ]; then
+        download "$url" "$video_quality" "$audio" "$output_format_video"
+    elif [ "$choice" = "2" ]; then
+        download "$url" "$video_quality" "$audio" "$output_format_playlist"
+    else
+        echo "Invalid choice. Please enter '1' or '2'."
+    fi
 fi
