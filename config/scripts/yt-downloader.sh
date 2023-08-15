@@ -1,7 +1,9 @@
-
 #!/bin/bash
 
-cd /home/zed/Downloads/
+target_directory="$HOME/Downloads/YT-DOWNLOADS"
+[ -d "$target_directory" ] || mkdir -p "$target_directory"
+
+cd $target_directory
 
 # Function to prompt user for choice
 get_choice() {
