@@ -154,6 +154,7 @@ mark k /mnt/FILES/Courses/UNIV_COURS/L2/L2/L2-KHBICH/S4/
 "  %u uses command's output to build a file list
 "  see `:help vifm-macros` and `:help vifm-filename-modifiers` for more
 
+command! play nohup mpv %f >/dev/null 2>&1 &
 command! itp !! ~/.config/scripts/usefull_scripts/imgs_to_pdf.sh %f
 command! pti !! ~/.config/scripts/usefull_scripts/pdf_to_img.sh %f
 command! cpdf !! ~/.config/scripts/usefull_scripts/compress_pdfs.sh %d
@@ -496,6 +497,12 @@ fileviewer .*/ exa -a --colour=always --group-directories-first
 " ------------------------------------------------------------------------------
 " Sample keyboard mappings
 " ------------------------------------------------------------------------------
+
+" Run videos in the background 
+nnoremap m :play<cr>
+
+" Change "-" with "- [Watched]"
+nnoremap W :s?-?- [Watched] <cr>
 
 " Toggle hidden files
 nnoremap . za
