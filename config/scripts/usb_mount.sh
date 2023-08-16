@@ -1,4 +1,3 @@
-
 #!/bin/bash
 
 # Check if dmenu is installed
@@ -22,8 +21,39 @@ mount_usb() {
     fi
 
     udisksctl mount -b "/dev/$selected_device"
-    notify-send 'ZED' 'USB device mounted'
+    echo "USB device $selected_device mounted."
+}
+
+# Function to unmount the mounted device
+umount_device() {
+    selected_device=$(lsblk -ndo KNAME,MOUNTPOINT | grep -E '/run/media/' | awk '($2!="") {print $1}')
+
+    if [ -z "$selected_device" ]; then
+        echo "No device mounted. Nothing to unmount."
+        exit 1
+    fi
+
+    chosen_device="$selected_device"
+
+    if [ -z "$chosen_device" ]; then
+        echo "No device selected. Exiting."
+        exit 1
+    fi
+
+    udisksctl unmount -b "/dev/$chosen_device"
+    echo "Device $chosen_device unmounted."
 }
 
 # Main script logic
-mount_usb
+case "$1" in
+    mount)
+        mount_usb
+        ;;
+    umount)
+        umount_device
+        ;;
+    *)
+        echo "Usage: $0 {mount|umount}"
+        exit 1
+        ;;
+esac
