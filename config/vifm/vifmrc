@@ -154,6 +154,8 @@ mark k /mnt/FILES/Courses/UNIV_COURS/L2/L2/L2-KHBICH/S4/
 "  %u uses command's output to build a file list
 "  see `:help vifm-macros` and `:help vifm-filename-modifiers` for more
 
+" command to collect the total duration (time) of a bunch of videos 
+command! tt total=0;for f in *.%a;do d=$(ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 "$f"|cut -d"." -f1);total=$((total+d));done;echo "Total: $((total/3600))h $(((total%3600)/60))m $((total%60))s"; read -p "Press Enter to exit"
 command! play nohup mpv %f >/dev/null 2>&1 &
 command! itp !! ~/.config/scripts/usefull_scripts/imgs_to_pdf.sh %f
 command! pti !! ~/.config/scripts/usefull_scripts/pdf_to_img.sh %f
