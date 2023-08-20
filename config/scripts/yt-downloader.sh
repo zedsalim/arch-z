@@ -18,7 +18,8 @@ download() {
     local output_format="$2"
 
     echo "Downloading..."
-    yt-dlp -f "b" -S "filesize~50M" -o "$output_format" "$url"
+    # yt-dlp -f "b" -S "filesize~50M" -o "$output_format" "$url"
+    yt-dlp -S "height:720"  -o "$output_format" "$url"
 }
 
 # Read the video URL from the clipboard
