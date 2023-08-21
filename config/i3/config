@@ -15,8 +15,8 @@ exec --no-startup-id ~/.config/scripts/resolution.sh
 
 set $mod Mod4
 set $alt Mod1 
-set $g_inner 9
-set $g_outer 4
+set $g_inner 6
+set $g_outer 3
 smart_borders on
 ######################################
 #             Theme
