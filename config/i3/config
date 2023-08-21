@@ -84,3 +84,8 @@ for_window [class="qBittorrent"] floating enable sticky enable border normal
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
+
+bar {
+    position top
+    status_command i3blocks -c ~/.config/i3blocks/i3blocks.conf
+}

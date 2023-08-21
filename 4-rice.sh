@@ -24,7 +24,7 @@ cp -r config/scripts/ ~/.config
 cp -r config/dunst/ ~/.config
 cp -r config/rofi/ ~/.config
 cp -r config/vifm/ ~/.config
-cp -r config/polybar/ ~/.config
+cp -r config/i3blocks/ ~/.config
 cp -r config/zathura/ ~/.config
 cp -r config/kitty/ ~/.config
 cp config/picom.conf ~/.config

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define the choices
-choices=("i3-config" "i3-workspaces" "i3-colors" "sxhkd" "polybar" "kitty" "vifm"  "github" "scripts" )
+choices=("i3-config" "i3-workspaces" "i3-colors" "sxhkd" "i3blocks" "kitty" "vifm"  "github" "scripts" )
 
 # Prompt the user to select a choice using rofi
 selected_choice=$(printf '%s\n' "${choices[@]}" | rofi -dmenu -p "Select a config file:")
@@ -20,8 +20,8 @@ case $selected_choice in
     "sxhkd")
         config_file="$HOME/.config/sxhkd/sxhkdrc"
         ;;
-    "polybar")
-        config_file="$HOME/.config/polybar/config"
+    "i3blocks")
+        config_file="$HOME/.config/i3blocks/i3blocks.conf"
         ;;
     "kitty")
         config_file="$HOME/.config/kitty/kitty.conf"

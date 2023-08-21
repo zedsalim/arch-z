@@ -22,7 +22,7 @@ PKGS=(
     'i3-gaps'                # Tiling window manager
     'rofi'                   # Application launcher
     'dmenu'                  # Dynamic menu
-    'polybar'                # Status bar
+    'i3blocks'               # Status bar
     'dunst'                  # Notification daemon
     'libnotify'              # Notification library
     'picom'                  # Compositor
