@@ -25,8 +25,8 @@ font pango:DejaVu Sans Mono 10
 new_window 1pixel
 gaps inner $g_inner
 gaps outer $g_outer
-default_border pixel 2
-default_floating_border pixel 2
+default_border pixel 3
+default_floating_border pixel 3
 floating_modifier $mod
 bindsym $mod+q kill
 
