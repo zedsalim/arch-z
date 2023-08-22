@@ -22,3 +22,5 @@ ibus-daemon -drx &
 
 sleep 2
 ibus engine xkb:fr:latin9:fra &
+
+setxkbmap -option "caps:escape_shifted_capslock"
