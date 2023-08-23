@@ -1,4 +1,3 @@
-
 #!/bin/bash
 
 # Function to compress a single PDF file using Ghostscript

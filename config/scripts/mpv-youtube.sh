@@ -1,4 +1,3 @@
-
 #!/bin/bash
 
 play_clipboard_url() {

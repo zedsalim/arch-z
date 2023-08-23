@@ -1,4 +1,3 @@
-
 #!/bin/bash
 
 # Check if ImageMagick is installed

@@ -1,4 +1,3 @@
-
 #!/bin/bash
 
 # Function to combine all images into a single PDF

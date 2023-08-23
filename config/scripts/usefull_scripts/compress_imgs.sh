@@ -1,4 +1,3 @@
-
 #!/bin/bash
 
 # Function to compress a single image using ImageMagick's mogrify

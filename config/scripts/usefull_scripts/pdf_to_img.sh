@@ -1,4 +1,3 @@
-
 #!/bin/bash
 
 # Function to extract images from a merged PDF file

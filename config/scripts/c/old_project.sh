@@ -1,4 +1,3 @@
-
 #!/bin/bash
 
 cd /mnt/FILES/My_Stuff/c_projects
