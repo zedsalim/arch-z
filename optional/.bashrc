@@ -136,8 +136,8 @@ alias cmt='git commit -m'
 alias push='git push'
 alias pi='sudo pacman -S'
 alias pu='sudo pacman -Syu'
-alias um='fusermount -u ~/phone_mount'
-alias mm='fjmtpfs ~/phone_mount'
+alias up='fusermount -u ~/phone_mount'
+alias mp='jmtpfs ~/phone_mount'
 ufetch
 ##-----------------------------------------------------
 ## synth-shell-prompt.sh
