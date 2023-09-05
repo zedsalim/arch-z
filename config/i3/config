@@ -62,6 +62,12 @@ for_window [title="dropdown"] move scratchpad
 for_window [title="dropdown"] border pixel 5
 bindsym $mod+Shift+Return [title="dropdown"] scratchpad show; move position center
 
+for_window [title="timer"] floating enable
+for_window [title="timer"] resize set 1200 850
+for_window [title="timer"] move scratchpad
+for_window [title="timer"] border pixel 5
+bindsym $mod+Shift+BackSpace [title="timer"] scratchpad show; move position center
+
 # Set Kitty to floating mode and move to top-left with increased height (for listing projects)
 for_window [class="KittyC"] floating enable, move position 0 28, resize set 25 ppt 97 ppt
 

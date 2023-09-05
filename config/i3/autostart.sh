@@ -18,6 +18,9 @@ sxhkd -c ~/.config/sxhkd/sxhkdrc &
 pkill -f "kitty --title dropdown -e tmux new-session \; split-window -v"
 kitty --title dropdown -e tmux new-session \; split-window -v &
 
+pkill -f "kitty --title timer"
+kitty --title timer &
+
 ibus-daemon -drx &
 
 sleep 2
