@@ -1,5 +1,6 @@
 vim ~/.Xresources
-#xrdb -merge 96
-xrdb -merge <<< "Xft.dpi: 96"
+# xrdb -merge 96
+# xrdb -merge <<< "Xft.dpi: 96"
+Xft.dpi: 96
 xrdb -merge ~/.Xresources
 
