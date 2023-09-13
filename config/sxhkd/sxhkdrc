@@ -49,6 +49,9 @@ alt + m
 alt + t 
 	/mnt/FILES/My_Stuff/sftp_s.sh
 
+alt + g
+	 ~/.config/scripts/gpu_temp.sh
+
 alt + p 
   pavucontrol
 
