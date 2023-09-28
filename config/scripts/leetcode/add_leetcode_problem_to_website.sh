@@ -7,7 +7,7 @@ read -p "Enter the name of the problem: " problem_name
 problem_link="https://leetcode.com/problems/$(echo "$problem_name" | tr ' ' '-' | tr '[:upper:]' '[:lower:]')/"
 
 # Automatically generate the GitHub solution link
-solution_link="https://github.com/zedsalim/leetcode-solutions/tree/main/$(echo "$problem_name" | tr ' ' '-' | tr '[:upper:]' '[:lower:]').c"
+solution_link="https://github.com/zedsalim/leetcode-solutions/blob/master/$(echo "$problem_name" | tr ' ' '-' | tr '[:upper:]' '[:lower:]').c"
 
 # Prompt the user for the difficulty level
 echo "Select the difficulty level:"
