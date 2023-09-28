@@ -40,9 +40,14 @@ new_row+="    <td>$difficulty</td>\n"
 new_row+="</tr>"
 
 # Insert the new row into the HTML file
-sed -i "/<!-- Add more problems here -->/i $new_row" /home/zed/Documents/github/zedsalim/leetcode/index.html
+sed -i "/<!-- Add more problems here -->/i $new_row" /home/zed/Documents/github/zedsalim/leetcode-tracker/index.html
 
 cd /home/zed/Documents/github/zedsalim/leetcode-tracker
+git add .
+git commit -m "adding new problem"
+git push
+
+cd /home/zed/Documents/github/zedsalim/leetcode-solutions
 git add .
 git commit -m "adding new problem"
 git push
