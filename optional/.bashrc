@@ -126,6 +126,8 @@ alias h='htop'
 alias r='ranger'
 alias d='bash ~/.config/scripts/set-double-display.sh'
 alias s='bash ~/.config/scripts/set-single-display.sh'
+alias l='bash ~/.config/scripts/leetcode/create_solution_file.sh'
+alias lg='bash ~/.config/scripts/leetcode/add_leetcode_problem_to_website.sh'
 # alias c='bash ~/.config/scripts/c/compile.sh'
 alias c='gcc -Wall -Wextra -lm main.c
 ./a.out'
