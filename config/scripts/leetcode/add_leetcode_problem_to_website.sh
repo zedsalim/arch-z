@@ -42,7 +42,7 @@ new_row+="</tr>"
 # Insert the new row into the HTML file
 sed -i "/<!-- Add more problems here -->/i $new_row" /home/zed/Documents/github/zedsalim/leetcode/index.html
 
-cd  /home/zed/Documents/github/zedsalim/leetcode
+cd /home/zed/Documents/github/zedsalim/leetcode-tracker
 git add .
 git commit -m "adding new problem"
 git push
