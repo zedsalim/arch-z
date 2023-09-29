@@ -14,3 +14,14 @@ touch "$file_name"
 
 # Copy the processed name back to the clipboard
 echo -n "$name" | xclip -selection clipboard
+
+echo "#include <stdio.h>
+
+int main()
+{
+
+    return 0;
+}" > "$file_name"
+
+# Open main.c in nvim
+nvim $file_name
