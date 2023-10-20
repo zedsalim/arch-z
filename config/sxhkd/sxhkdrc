@@ -1,26 +1,29 @@
 super + shift + h
   zathura "$HOME/.config/guide.pdf"
 
+alt + g
+	 ~/.config/scripts/gpu_temp.sh
+
 alt + x
-  kitty -e "vifm" /mnt/FILES/Watch
+ kitty -e "vifm" /mnt/FILES/Watch
 
 alt + c
 	kitty -e ~/.config/scripts/conf.sh
 
-alt + shift + n
+alt + n
 	 ~/.config/scripts/c/new_project.sh
 
-alt + shift + o
+alt + o
 	 ~/.config/scripts/c/old_project.sh
 
 alt + s
 	feh -F "/mnt/FILES/My_Stuff/schedule.png"
 
+alt + h
+	feh -F "/mnt/FILES/My_Stuff/home_schedule.png"
+
 alt + b 
 	~/.config/scripts/bookmarks.sh
-
-alt + h 
-	/mnt/FILES/My_Stuff/home-server.sh
 
 alt + l
 	/mnt/FILES/My_Stuff/mytodo/todo
@@ -33,6 +36,9 @@ alt + u
 
 alt + shift + u 
 	~/.config/scripts/usb_mount.sh umount
+
+alt + shift + d 
+	kitty --class KittySftp -e ~/.config/scripts/yt-downloader-sub.sh
 
 alt + d 
 	kitty --class KittySftp -e ~/.config/scripts/yt-downloader.sh
@@ -49,18 +55,8 @@ alt + m
 alt + t 
 	/mnt/FILES/My_Stuff/sftp_s.sh
 
-alt + g
-	 ~/.config/scripts/gpu_temp.sh
-
 alt + p 
   pavucontrol
-
-# BG Selector
-F1
-	~/.config/scripts/wallpaper-single-display.sh
-
-F2
-	~/.config/scripts/wallpaper-double-display.sh
 
 # Programs
 super + Return
@@ -70,7 +66,7 @@ super + p
   rofi -show drun -line padding 4 -hide-scrollbar -show-icons
    	
 super + n
-  kitty -e "vifm" /home/zed/ /mnt/FILES/
+ kitty -e "vifm" /home/zed/ /mnt/FILES/
 
 super + w 
   chromium
@@ -164,4 +160,3 @@ super+shift+{Left,Down,Up,Right}
 
 super + ctrl + {Left,Down,Up,Right}
   i3-msg resize {grow width 1 px or 1 ppt, shrink height 1 px or 1 ppt, grow height 1 px or 1 ppt, shrink width 1 px or 1 ppt}
-

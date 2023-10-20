@@ -105,12 +105,12 @@ PKGS=(
     'jdk-openjdk'            # Java Development Kit
 
     # Section 14: Drivers
-    # 'nvidia'
+    'nvidia'
     # 'xf86-input-libinput'
     # 'xf86-input-evdev'
     # 'xf86-video-fbdev'
     # 'xf86-video-intel'
-    'xf86-video-nouveau'
+    # 'xf86-video-nouveau'
     # 'xf86-video-vmware'
 )
 

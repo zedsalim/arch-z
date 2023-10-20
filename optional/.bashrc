@@ -140,6 +140,8 @@ alias pi='sudo pacman -S'
 alias pu='sudo pacman -Syu'
 alias up='fusermount -u ~/phone_mount'
 alias mp='jmtpfs ~/phone_mount'
+alias caps='setxkbmap -option "caps:escape"'
+alias speed='xset r rate 300 50'
 ufetch
 ##-----------------------------------------------------
 ## synth-shell-prompt.sh
