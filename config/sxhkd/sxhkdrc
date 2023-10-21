@@ -1,6 +1,9 @@
 super + shift + h
   zathura "$HOME/.config/guide.pdf"
 
+alt + f
+	 ~/.config/scripts/focus.sh
+
 alt + g
 	 ~/.config/scripts/gpu_temp.sh
 
