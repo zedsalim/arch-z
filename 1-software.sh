@@ -99,6 +99,7 @@ PKGS=(
 
     # Section 13: Miscellaneous Utilities
     'xfce4-power-manager'    # Power manager
+    'man-pages'              # Man pages
     'exa'                    # Replacement for 'ls' command
     'xclip'                  # Command line interface to X selections
     'npm'                    # Package manager for JavaScript
