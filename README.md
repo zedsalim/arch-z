@@ -17,7 +17,7 @@
 - **OS:** [Arch Linux](https://archlinux.org)
 - **Terminal:** [kitty](https://github.com/kovidgoyal/kitty)
 - **Shell:** [bash](https://wiki.archlinux.org/title/Bash)
-- **Status Bar:** [polybar](https://github.com/polybar/polybar)
+- **Status Bar:** [i3block](https://github.com/vivien/i3blocks)
 - **Compositor:** [picom](https://github.com/ibhagwan/picom)
 - **Editor:** [neovim](https://github.com/neovim/neovim)
 - **Browser:** [Chromium](https://github.com/chromium/chromium)
@@ -75,10 +75,6 @@ ls
    fonts: A directory containing font files used in the Arch-Z configuration.\
    theme: A directory with theme-related files.\
    optional: A folder containing optional configuration files and scripts that are not necessary for the basic setup (check them out).
-
-1. Other Files **(Delete them if you want)**:\
-   README.md: A Markdown file serving as the main documentation or guide for this project.\
-   \[ign\]: A folder that contains Essential Files for the README.md.
 
 **_Please note that the directories are marked as "Do not modify" to indicate that they contain important files and resources that should not be altered unless you have specific knowledge or intention to modify them._**
 
