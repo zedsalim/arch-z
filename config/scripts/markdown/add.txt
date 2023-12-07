@@ -1,0 +1,11 @@
+pandoc -s %c -c /home/zed/.config/scripts/markdown/style.css -o %c:r.html
+
+sxhkd:
+shift + Print
+  /home/zed/.config/scripts/markdown/md_img_clipboard.sh
+
+install pandoc
+
+vimf:
+command! ph pandoc -s %c -c /home/zed/.config/scripts/markdown/style.css -o %c:r.html
+

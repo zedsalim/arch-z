@@ -28,6 +28,7 @@ PKGS=(
     'picom'                  # Compositor
     'kitty'                  # Terminal emulator
     'lxappearance'           # GTK+ theme switcher
+    'kolourpaint'            # Simple graphics editor
     'wget'                   # File downloader
     'polkit-gnome'           # PolicyKit authentication agent
     'gvfs-mtp'               # MTP support for file managers
@@ -39,12 +40,15 @@ PKGS=(
 
     # Section 4: System Utilities
     'network-manager-applet' # Network manager applet
+    'man-pages'             # manual pages
     'gparted'                # Partition editor
+    'gnome-disk-utility'     # Partition editor
     'bleachbit'              # System cleaner
     'arandr'                 # Screen layout editor
     'htop'                   # System monitoring tool
     'dbus'                   # Message bus system
     'python-pip'             # Package installer for Python
+    'bpython'                # Fancy interface to the Python interpreter
     'github-cli'             # Interact with GitHub repositories via command line
     'tmux'                   # Terminal multiplexer
     'openssh'                # Suite of secure networking utilities
@@ -79,6 +83,7 @@ PKGS=(
 
     # Section 9: Compression and Archive Tools
     'unzip'                  # Zip file extractor
+    'unrar'                  # Rar file extractor
     'zip'                    # Zip file compressor
     'p7zip'                  # Zip file compressor
     'file-roller'            # Archive manager
@@ -103,7 +108,7 @@ PKGS=(
     'exa'                    # Replacement for 'ls' command
     'xclip'                  # Command line interface to X selections
     'npm'                    # Package manager for JavaScript
-    'jdk-openjdk'            # Java Development Kit
+    # 'jdk-openjdk'            # Java Development Kit
 
     # Section 14: Drivers
     'nvidia'
@@ -129,5 +134,5 @@ yay -S yt-dlp  --noconfirm
 # MTP Android device mounting tool
 yay -S jmtpfs --noconfirm
 
-sudo systemctl enable cups
+# sudo systemctl enable cups
 # sudo systemctl enable bluetooth

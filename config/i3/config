@@ -16,7 +16,7 @@ set $mod Mod4
 set $alt Mod1 
 set $g_inner 6
 set $g_outer 3
-smart_borders on
+# smart_borders on
 ######################################
 #             Theme
 
@@ -86,7 +86,6 @@ for_window [class="Simple-scan"] floating enable border normal
 for_window [class="Todo"] floating enable, resize set 800 800, move position center
 for_window [class="mpv"] floating enable, resize set 1000 1000, move position center
 for_window [class="qBittorrent"] floating enable border normal
-
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
 

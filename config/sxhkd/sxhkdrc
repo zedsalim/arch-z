@@ -1,8 +1,20 @@
 super + shift + h
   zathura "$HOME/.config/guide.pdf"
 
-alt + f
-	 ~/.config/scripts/focus.sh
+alt + r
+  zathura "/mnt/FILES/Courses/CyberSecurity/Binary Exploitation/Docs/RE-zero_to_hero.pdf"
+
+alt + F1
+   /home/zed/.config/scripts/chromium.sh
+
+alt + F2
+   /home/zed/.config/scripts/htop.sh
+
+alt + F3
+   /home/zed/.config/scripts/discord.sh
+
+alt + F4
+   /home/zed/.config/scripts/telegram.sh
 
 alt + g
 	 ~/.config/scripts/gpu_temp.sh
@@ -49,21 +61,15 @@ alt + d
 alt + shift + y
 	sudo /home/zed/.config/scripts/web_blocker.sh
 
-alt + z 
-	~/.config/scripts/bookmark_pdf.sh
-
-alt + m 
-	/mnt/FILES/My_Stuff/sftp_m.sh
-
-alt + t 
-	/mnt/FILES/My_Stuff/sftp_s.sh
-
 alt + p 
   pavucontrol
 
 # Programs
 super + Return
 	kitty
+
+super + d
+	discord
 
 super + p
   rofi -show drun -line padding 4 -hide-scrollbar -show-icons
@@ -74,14 +80,14 @@ super + n
 super + w 
   chromium
 
+super + t 
+	telegram-desktop
+
 super + c 
 	code-oss
 
-super + t
-  telegram-desktop
-
-super + d
-  discord
+shift + Print
+  /home/zed/.config/scripts/markdown/md_img_clipboard.sh
 
 Print
   flameshot gui
@@ -98,13 +104,6 @@ super + Prior
 
 super + BackSpace
     pactl set-sink-mute @DEFAULT_SINK@ toggle
-
-# Brightness bindings
-XF86MonBrightnessDown
-    ~/.config/scripts/brightness-control.sh XF86MonBrightnessDown
-
-XF86MonBrightnessUp
-    ~/.config/scripts/brightness-control.sh XF86MonBrightnessUp
 
 # Switch between keyboard languages
 alt + space

@@ -1,12 +1,12 @@
 #!/bin/bash
 
 # Application to block
-app_to_block="chromium"
+app_to_block="htop"
 
 # Get the duration in minutes from the user
 # read -p "Enter the amount of time to block access (in minutes): " duration_minutes
 
-duration_minutes=$(rofi -dmenu -p "Enter the amount of time to block access (in minutes): ")
+duration_minutes=$(rofi -dmenu -p "Enter the amount of time to block Htop: ")
 
 # Calculate the duration in seconds
 duration_seconds=$((duration_minutes * 60))
@@ -32,4 +32,4 @@ sleep $duration_seconds
 
 # The trap will automatically kill the background process when the script exits
 
-notify-send --urgency=critical 'Blocker' 'Access restored!'
+notify-send --urgency=critical 'Htop' 'Access restored!'
