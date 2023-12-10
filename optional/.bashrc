@@ -151,7 +151,10 @@ if [ -f ~/.config/synth-shell/synth-shell-prompt.sh ] && [ -n "$( echo $- | grep
     source ~/.config/synth-shell/synth-shell-prompt.sh
 fi
 
-alias sl='ssh server@192.168.1.33'
+alias prox='ssh root@192.168.1.201'
+alias bat='ssh -n -q root@192.168.1.201 bat'
+alias cpu='ssh -n -q root@192.168.1.201 sensors'
+alias ubu='ssh ubuntu@192.168.1.202'
 
 cmg() {
     git add .
