@@ -97,6 +97,7 @@ PKGS=(
 
     # Section 12: Other Tools and Libraries
     'galculator'             # Calculator
+    'bc'                     # Basic Calculator
     'zathura-pdf-poppler'    # PDF viewer
     'qbittorrent'            # BitTorrent client
     'transmission-cli'       # command-line BitTorrent client

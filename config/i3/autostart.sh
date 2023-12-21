@@ -16,7 +16,7 @@ killall sxhkd
 sxhkd -c ~/.config/sxhkd/sxhkdrc &
 
 pkill -f "kitty --title dropdown -e tmux new-session \; split-window -v"
-kitty --title dropdown -e tmux new-session \; split-window -v &
+kitty --title dropdown -e tmux new-session "bc" \; send-keys -t 0 C-l \; split-window -v \; select-pane -t 0
 
 pkill -f "kitty --title timer"
 kitty --title timer &
