@@ -22,7 +22,7 @@ pkill -f "kitty --title timer"
 kitty --title timer &
 
 pkill -f "kitty --title calculator"
-kitty --title calculator --hold python -q
+kitty --title calculator --hold python -q &
 
 ibus-daemon -drx &
 
