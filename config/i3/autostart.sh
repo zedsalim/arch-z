@@ -21,6 +21,9 @@ kitty --title dropdown -e tmux new-session \; split-window -v &
 pkill -f "kitty --title timer"
 kitty --title timer &
 
+pkill -f "kitty --title calculator"
+kitty --title calculator --hold python -q
+
 ibus-daemon -drx &
 
 sleep 2
