@@ -14,8 +14,8 @@ exec --no-startup-id ~/.config/scripts/resolution.sh
 
 set $mod Mod4
 set $alt Mod1 
-set $g_inner 6
-set $g_outer 3
+set $g_inner 4
+set $g_outer 1
 # smart_borders on
 ######################################
 #             Theme
@@ -25,8 +25,8 @@ font pango:DejaVu Sans Mono 10
 new_window 1pixel
 gaps inner $g_inner
 gaps outer $g_outer
-default_border pixel 3
-default_floating_border pixel 3
+default_border pixel 2
+default_floating_border pixel 2
 floating_modifier $mod
 bindsym $mod+q kill
 
