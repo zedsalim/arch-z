@@ -512,6 +512,9 @@ nnoremap X :ph<cr>
 " Run videos in the background 
 nnoremap m :play<cr>
 
+" Delete completly
+nnoremap DD :!rm -rf %f<cr>
+
 " Change "-" with "- [Watched]"
 nnoremap W :s?-?- [Watched] <cr>
 
