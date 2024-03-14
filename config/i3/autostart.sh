@@ -17,17 +17,17 @@ xfce4-power-manager &
 killall sxhkd
 sxhkd -c ~/.config/sxhkd/sxhkdrc &
 
-pkill -f "kitty --title dropdown -e tmux new-session \; split-window -v"
-kitty --title dropdown -e tmux new-session \; split-window -v &
+pkill -f "kitty --title DDropdown -e tmux new-session \; split-window -v"
+kitty --title DDropdown -e tmux new-session \; split-window -v &
 
 # pkill -f "kitty --title dropdown -e tmux new-session \; split-window -v"
 # kitty --title dropdown -e tmux new-session 'bc' \; send-keys -t 0 C-l \; split-window -v \; select-pane -t 0 &
 
-pkill -f "kitty --title timer"
-kitty --title timer &
+pkill -f "kitty --title ttimmerr"
+kitty --title ttimmerr &
 
-pkill -f "kitty --title calculator"
-kitty --title calculator --hold python -q &
+pkill -f "kitty --title py-Ccal"
+kitty --title py-Ccal --hold python -q &
 
 ibus-daemon -drx &
 

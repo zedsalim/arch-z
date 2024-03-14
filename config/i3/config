@@ -62,23 +62,23 @@ bindsym $mod+g focus mode_toggle
 #       Floating, Scratchpad
 
 # Scratchpad
-for_window [title="dropdown"] floating enable
-for_window [title="dropdown"] resize set 1200 850
-for_window [title="dropdown"] move scratchpad
-for_window [title="dropdown"] border pixel 5
-bindsym $mod+Shift+Return [title="dropdown"] scratchpad show; move position center
+for_window [title="DDropdown"] floating enable
+for_window [title="DDropdown"] resize set 1200 850
+for_window [title="DDropdown"] move scratchpad
+for_window [title="DDropdown"] border pixel 5
+bindsym $mod+Shift+Return [title="DDropdown"] scratchpad show; move position center
 
-for_window [title="timer"] floating enable
-for_window [title="timer"] resize set 1200 850
-for_window [title="timer"] move scratchpad
-for_window [title="timer"] border pixel 5
-bindsym $mod+Shift+BackSpace [title="timer"] scratchpad show; move position center
+for_window [title="ttimmerr"] floating enable
+for_window [title="ttimmerr"] resize set 1200 850
+for_window [title="ttimmerr"] move scratchpad
+for_window [title="ttimmerr"] border pixel 5
+bindsym $mod+Shift+BackSpace [title="ttimmerr"] scratchpad show; move position center
 
-for_window [title="calculator"] floating enable
-for_window [title="calculator"] resize set 400 200
-for_window [title="calculator"] move scratchpad
-for_window [title="calculator"] border pixel 5
-bindsym $alt+BackSpace [title="calculator"] scratchpad show; move position center
+for_window [title="py-Ccal"] floating enable
+for_window [title="py-Ccal"] resize set 400 200
+for_window [title="py-Ccal"] move scratchpad
+for_window [title="py-Ccal"] border pixel 5
+bindsym $alt+BackSpace [title="py-Ccal"] scratchpad show; move position center
 
 # Set Kitty to floating mode and move to top-left with increased height (for listing projects)
 for_window [class="KittyC"] floating enable, move position 0 28, resize set 25 ppt 97 ppt
@@ -89,6 +89,7 @@ for_window [class="KittySftp"] floating enable, move position center, resize set
 # Open specific applications in floating mode
 for_window [title="alsamixer"] floating enable border pixel 1
 for_window [class="gnome-disks"] floating enable border pixel 1
+for_window [class="dosbox"] floating disable
 for_window [class="Galculator"] floating enable border pixel 1
 for_window [class="GParted"] floating enable border normal
 for_window [class="Lxappearance"] floating enable sticky enable border normal

@@ -67,6 +67,7 @@ PKGS=(
     'sxhkd'                  # X hotkey daemon
     'numlockx'               # Num Lock status control
     'neovim'                 # hyperextensible Vim-based text editor
+    'geany'
 
     # Section 7: Sound and Audio
     'pulseaudio'             # Sound server
