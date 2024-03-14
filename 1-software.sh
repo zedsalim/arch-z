@@ -37,6 +37,7 @@ PKGS=(
 
     # Section 3: File Managers
     'vifm'                 # Terminal file manager
+    'pcmanfm'
 
     # Section 4: System Utilities
     'network-manager-applet' # Network manager applet
@@ -48,8 +49,6 @@ PKGS=(
     'htop'                   # System monitoring tool
     'dbus'                   # Message bus system
     'python-pip'             # Package installer for Python
-    'bpython'                # Fancy interface to the Python interpreter
-    'github-cli'             # Interact with GitHub repositories via command line
     'tmux'                   # Terminal multiplexer
     'openssh'                # Suite of secure networking utilities
     'rsync'                  # For transferring and synchronizing files
@@ -77,7 +76,7 @@ PKGS=(
     'pavucontrol'            # Sound mixer
 
     # Section 8: Development Tools
-    'telegram-desktop'       # Messaging app
+    # 'telegram-desktop'       # Messaging app
     'code'                   # Source code editor
     'chromium'               # Web Browser
 
@@ -92,23 +91,22 @@ PKGS=(
     # 'bluez'                  # Bluetooth stack utilities
     # 'bluez-utils'            # Bluetooth stack utilities
     # 'blueman'                # Bluetooth manager
-    'cups'                   # Printing system
-    'simple-scan'            # Document scanner
+    # 'cups'                   # Printing system
+    # 'simple-scan'            # Document scanner
 
     # Section 12: Other Tools and Libraries
-    'galculator'             # Calculator
+    # 'galculator'             # Calculator
     'zathura-pdf-poppler'    # PDF viewer
     'qbittorrent'            # BitTorrent client
     'transmission-cli'       # command-line BitTorrent client
-    'discord'                # Messaging and VoIP social platform
+    # 'discord'                # Messaging and VoIP social platform
 
     # Section 13: Miscellaneous Utilities
     'xfce4-power-manager'    # Power manager
-    'man-pages'              # Man pages
     'exa'                    # Replacement for 'ls' command
     'xclip'                  # Command line interface to X selections
     'npm'                    # Package manager for JavaScript
-    # 'jdk-openjdk'            # Java Development Kit
+    'jdk-openjdk'            # Java Development Kit
 
     # Section 14: Drivers
     'nvidia'

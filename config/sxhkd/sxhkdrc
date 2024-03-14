@@ -1,8 +1,5 @@
-super + shift + h
-  zathura "$HOME/.config/guide.pdf"
-
-alt + r
-  zathura "/mnt/FILES/Courses/CyberSecurity/Binary Exploitation/Docs/RE-zero_to_hero.pdf"
+F1
+  ibus engine xkb:fr:latin9:fra
 
 alt + F1
    /home/zed/.config/scripts/chromium.sh
@@ -10,11 +7,11 @@ alt + F1
 alt + F2
    /home/zed/.config/scripts/htop.sh
 
-alt + F3
-   /home/zed/.config/scripts/discord.sh
+# alt + F3
+#   /home/zed/.config/scripts/discord.sh
 
-alt + F4
-   /home/zed/.config/scripts/telegram.sh
+#alt + F4
+#   /home/zed/.config/scripts/telegram.sh
 
 alt + g
 	 ~/.config/scripts/gpu_temp.sh
@@ -34,8 +31,11 @@ alt + o
 alt + s
 	feh -F "/mnt/FILES/My_Stuff/schedule.png"
 
-alt + h
-	feh -F "/mnt/FILES/My_Stuff/home_schedule.png"
+alt + t
+	feh -F "/mnt/FILES/My_Stuff/uni.png"
+
+alt + f
+  firefox
 
 alt + b 
 	~/.config/scripts/bookmarks.sh
@@ -53,13 +53,13 @@ alt + shift + u
 	~/.config/scripts/usb_mount.sh umount
 
 alt + shift + d 
-	kitty --class KittySftp -e ~/.config/scripts/yt-downloader-sub.sh
+	kitty --class KittySftp -e ~/.config/scripts/yt-downloader-mp3.sh
 
 alt + d 
 	kitty --class KittySftp -e ~/.config/scripts/yt-downloader.sh
 
-alt + shift + y
-	sudo /home/zed/.config/scripts/web_blocker.sh
+#alt + shift + y
+#	sudo /home/zed/.config/scripts/web_blocker.sh
 
 alt + p 
   pavucontrol
@@ -68,8 +68,11 @@ alt + p
 super + Return
 	kitty
 
-super + d
-	discord
+#super + d
+#	discord
+
+#super + b
+#	virtualbox
 
 super + p
   rofi -show drun -line padding 4 -hide-scrollbar -show-icons
@@ -80,8 +83,8 @@ super + n
 super + w 
   chromium
 
-super + t 
-	telegram-desktop
+#super + t 
+#  telegram-desktop
 
 super + c 
 	code-oss

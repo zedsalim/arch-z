@@ -3,7 +3,7 @@
 target_directory="$HOME/Downloads/YT-DOWNLOADS"
 [ -d "$target_directory" ] || mkdir -p "$target_directory"
 
-cd $target_directory
+cd "$target_directory"
 
 # Function to prompt user for choice
 get_choice() {
@@ -18,8 +18,15 @@ download() {
     local output_format="$2"
 
     echo "Downloading..."
-    # yt-dlp -f "b" -S "filesize~50M" -o "$output_format" "$url"
     yt-dlp -S "height:720"  -o "$output_format" "$url"
+
+    # Check if the download was successful
+    if [ $? -eq 0 ]; then
+        # Display notification if download is completed successfully
+        notify-send --expire-time=120000 --urgency=critical "Wake Up!" "Download Completed"
+    else
+        echo "Download failed."
+    fi
 }
 
 # Read the video URL from the clipboard

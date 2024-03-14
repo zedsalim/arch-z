@@ -144,6 +144,22 @@ alias up='fusermount -u ~/phone_mount'
 alias mp='jmtpfs ~/phone_mount'
 alias caps='setxkbmap -option "caps:escape"'
 alias speed='xset r rate 300 50'
+alias 9='timer 90'
+alias chat='cd ~/Downloads/chat/ && source venv/bin/activate && python app.py'
+alias md='cd ~/Documents/moodle-scraper/ && source venv/bin/activate && python main.py && deactivate'
+alias dls='docker ps -a'
+alias ser='ssh server@192.168.1.202'
+# alias prox='ssh root@192.168.1.201'
+alias bat='ssh -n -q server@192.168.1.202 bat'
+alias cpu='ssh -n -q server@192.168.1.202 sensors'
+alias sw='/bin/bash /mnt/FILES/My_Stuff/rsync_win.sh'
+alias sl='/bin/bash /mnt/FILES/My_Stuff/rsync_linux.sh'
+alias soff='ssh -n -q server@192.168.1.202 "sudo shutdown now"'
+alias sreb='ssh -n -q server@192.168.1.202 "sudo reboot"'
+alias js='v "/mnt/FILES/Watch/Programming/WebDev/El Zero/Javascript/Practice/main.js"'
+alias wp='cd /home/zed/docker/wordpress && docker-compose up'
+alias lp='cd /home/zed/docker/lamp/ && docker-compose up'
+alias p='jmtpfs ~/phone_mount && sleep 2 && fusermount -u ~/phone_mount && jmtpfs ~/phone_mount && rsync -avr --progress ~/phone_mount/Phone/DCIM/p /mnt/FILES/Watch/Programming/WordPress/Images/Phone'
 ufetch
 ##-----------------------------------------------------
 ## synth-shell-prompt.sh
@@ -151,10 +167,6 @@ if [ -f ~/.config/synth-shell/synth-shell-prompt.sh ] && [ -n "$( echo $- | grep
     source ~/.config/synth-shell/synth-shell-prompt.sh
 fi
 
-alias prox='ssh root@192.168.1.201'
-alias bat='ssh -n -q root@192.168.1.201 bat'
-alias cpu='ssh -n -q root@192.168.1.201 sensors'
-alias ubu='ssh ubuntu@192.168.1.202'
 
 cmg() {
     git add .
@@ -165,6 +177,7 @@ lzg() {
     git commit -m "$1"
     git push
 }
+
 fc() { du -a ~/.config/* | awk '{print $2}' | fzf | xargs -r $EDITOR;}
 
 export EDITOR=nvim

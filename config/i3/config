@@ -52,6 +52,12 @@ bindsym $alt+Shift+e layout toggle split
 # Browser
 bindsym $mod+w exec chromium
 
+# Focus parent container
+bindsym $mod+m focus parent
+
+# Focus last floating/tiling container
+bindsym $mod+g focus mode_toggle
+
 #####################################
 #       Floating, Scratchpad
 

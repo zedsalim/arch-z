@@ -131,8 +131,7 @@ mark c ~/.config/
 mark u /run/media/zed/
 mark p ~/phone_mount
 mark h ~/
-mark b /mnt/FILES/Courses/UNIV_COURS/L2/L2/L2-CSBOUIRA/DISCORD/
-mark k /mnt/FILES/Courses/UNIV_COURS/L2/L2/L2-KHBICH/S4/
+mark w /mnt/FILES/Watch/Programming/WordPress/
 
 " ------------------------------------------------------------------------------
 " Commands
@@ -154,12 +153,15 @@ mark k /mnt/FILES/Courses/UNIV_COURS/L2/L2/L2-KHBICH/S4/
 "  %u uses command's output to build a file list
 "  see `:help vifm-macros` and `:help vifm-filename-modifiers` for more
 
+command! cr ! echo "$(xclip -selection clipboard -o)" > %d/link.txt
+
 command! in ! /mnt/FILES/My_Stuff/Files/usefull_scripts/index_md.sh %c
 command! ph pandoc -s %c -c /home/zed/.config/scripts/markdown/style.css -o %c:r.html
 " command to collect the total duration (time) of a bunch of videos 
 command! tm total=0; for f in %f; do d=$(ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 "$f" | cut -d"." -f1); total=$((total + d)); done; total_minutes=$((total / 60)); echo "Total: $total_minutes minutes"; read -p "Press Enter to exit"
 command! tt total=0;for f in %f;do d=$(ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 "$f"|cut -d"." -f1);total=$((total+d));done;echo "Total: $((total/3600))h $(((total%3600)/60))m $((total%60))s"; read -p "Press Enter to exit"
 command! play nohup mpv %f >/dev/null 2>&1 &
+command! ev nohup evince %f >/dev/null 2>&1 &
 command! itp !! ~/.config/scripts/usefull_scripts/imgs_to_pdf.sh %f
 command! pti !! ~/.config/scripts/usefull_scripts/pdf_to_img.sh %f
 command! cpdf !! ~/.config/scripts/usefull_scripts/compress_pdfs.sh %d
@@ -180,7 +182,7 @@ command! xz tar -cJvf %c.tar.xz %f
 command! uxz tar -xJvf %c
 command! utar tar -xvf %c
 command! ugz tar -xzvf %c
-command! send rsync -avr --progress %c ~/phone_mount/Phone/Download/
+command! send rsync -avr --progress %c ~/phone_mount/Phone/Download/Vids/
 command! run !! ./%f
 command! make !!make %a
 command! mkcd :mkdir %a | cd %a
@@ -290,7 +292,7 @@ filextype {*.avi,*.mp4,*.wmv,*.dat,*.3gp,*.ogv,*.mkv,*.mpg,*.mpeg,*.vob,
 fileviewer {*.avi,*.mp4,*.wmv,*.dat,*.3gp,*.ogv,*.mkv,*.mpg,*.mpeg,*.vob,
            \*.fl[icv],*.m2v,*.mov,*.webm,*.ts,*.mts,*.m4v,*.r[am],*.qt,*.divx,
            \<video/*>}
-          \ ffprobe -hide_banner -show_format -pretty %c 2>/dev/null | grep -e "duration" -e "size" -e "TAG:creation_time" --color=always
+          \ ffprobe -hide_banner -show_format -pretty %c 2>/dev/null | grep -e "filename" -e "duration" -e "size" -e "TAG:creation_time" --color=always
 
 
 " Web
@@ -509,14 +511,19 @@ fileviewer .*/ exa -a --colour=always --group-directories-first
 " Convert MD to HTML 
 nnoremap X :ph<cr>
 
+nnoremap Q :mp<cr>
+
 " Run videos in the background 
 nnoremap m :play<cr>
+
+nnoremap <C-c> :cr<cr>
 
 " Delete completly
 nnoremap DD :!rm -rf %f<cr>
 
 " Change "-" with "- [Watched]"
-nnoremap W :s?-?- [Watched] <cr>
+nnoremap W :s?-?- [Watched]<cr>
+nnoremap x :s?^\(.*\)?$\\[*] \1?<CR>
 
 " Toggle hidden files
 nnoremap . za
@@ -589,7 +596,8 @@ endif
 nnoremap I cw<c-a>
 nnoremap cc cw<c-u>
 nnoremap A cw
-nnoremap cw cW 
+nnoremap cw cW<c-u>
+nnoremap cx cW
 nnoremap cW cw
 
 " Change "-" with "- [Watched]"
