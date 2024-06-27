@@ -1,4 +1,5 @@
 {
+  "security.workspace.trust.enabled": false,
   "security.workspace.trust.untrustedFiles": "open",
   "editor.fontSize": 19,
   "window.zoomLevel": 0,
