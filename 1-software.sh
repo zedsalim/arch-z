@@ -78,7 +78,7 @@ PKGS=(
 
     # Section 8: Development Tools
     # 'telegram-desktop'       # Messaging app
-    'code'                   # Source code editor
+    # 'code'                   # Source code editor
     'chromium'               # Web Browser
 
     # Section 9: Compression and Archive Tools
@@ -132,6 +132,9 @@ yay -S yt-dlp  --noconfirm
 
 # MTP Android device mounting tool
 yay -S jmtpfs --noconfirm
+
+# VSCode Editor
+yay -S visual-studio-code-bin --noconfirm
 
 # sudo systemctl enable cups
 # sudo systemctl enable bluetooth
