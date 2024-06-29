@@ -64,6 +64,8 @@
   "vim.leader": "<Space>",
   "vim.hlsearch": true,
   "vim.normalModeKeyBindingsNonRecursive": [
+    // open new empty tab
+    { "before": ["<C-t>"], "commands": [":tabnew"] },
     // switch b/w buffers
     { "before": ["<Tab>"], "commands": [":bprevious"] },
     { "before": ["<S-Tab>"], "commands": [":bnext"] },
