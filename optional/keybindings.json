@@ -59,19 +59,15 @@
     "when": "filesExplorerFocus && !inputFocus"
   },
   {
-    "key": "ctrl+q",
-    "command": "workbench.action.closeActiveEditor"
-  },
-  {
     "key": "ctrl+w",
-    "command": "-workbench.action.closeActiveEditor"
+    "command": "workbench.action.closeActiveEditor"
   },
   {
     "key": "ctrl+shift+q",
     "command": "workbench.action.quit"
   },
   {
-    "key": "ctrl+q",
+    "key": "ctrl+w",
     "command": "-workbench.action.quit"
   }
 ]
