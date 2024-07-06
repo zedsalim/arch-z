@@ -131,7 +131,7 @@ mark c ~/.config/
 mark u /run/media/zed/
 mark p ~/phone_mount
 mark h ~/
-mark w /mnt/FILES/Watch/Programming/WordPress/
+mark w /mnt/FILES/Courses/Programming/WordPress/
 
 " ------------------------------------------------------------------------------
 " Commands
@@ -162,6 +162,7 @@ command! tm total=0; for f in %f; do d=$(ffprobe -v error -show_entries format=d
 command! tt total=0;for f in %f;do d=$(ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 "$f"|cut -d"." -f1);total=$((total+d));done;echo "Total: $((total/3600))h $(((total%3600)/60))m $((total%60))s"; read -p "Press Enter to exit"
 command! play nohup mpv %f >/dev/null 2>&1 &
 command! ev nohup evince %f >/dev/null 2>&1 &
+command! gn nohup geany %f >/dev/null 2>&1 &
 command! itp !! ~/.config/scripts/usefull_scripts/imgs_to_pdf.sh %f
 command! pti !! ~/.config/scripts/usefull_scripts/pdf_to_img.sh %f
 command! cpdf !! ~/.config/scripts/usefull_scripts/compress_pdfs.sh %d
@@ -171,7 +172,7 @@ command! mimg !! ~/.config/scripts/usefull_scripts/merge_imgs_to_pdf.sh %a %f
 command! mvimg sxiv -to %d | tee >(grep -oE '[^ ]+\.(jpg|jpeg|png|JPG|gif)$' > marked_images.txt) | xargs -I{} mv {} %a 
 command! flip convert %f -rotate 90 %f 
 command! v nvim %c
-command! c code-oss %c
+command! c code %c
 command! df df -h %m 2> /dev/null
 command! diff vim -d %f %F
 command! zip zip -r %c.zip %f
@@ -182,7 +183,7 @@ command! xz tar -cJvf %c.tar.xz %f
 command! uxz tar -xJvf %c
 command! utar tar -xvf %c
 command! ugz tar -xzvf %c
-command! send rsync -avr --progress %c ~/phone_mount/Phone/Download/Vids/
+command! send rsync -avr --progress %f "/home/zed/phone_mount/Internal shared storage/Download/"
 command! run !! ./%f
 command! make !!make %a
 command! mkcd :mkdir %a | cd %a
@@ -510,6 +511,8 @@ fileviewer .*/ exa -a --colour=always --group-directories-first
 " ------------------------------------------------------------------------------
 " Convert MD to HTML 
 nnoremap X :ph<cr>
+
+nnoremap v :v<cr>
 
 nnoremap Q :mp<cr>
 

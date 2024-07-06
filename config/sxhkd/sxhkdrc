@@ -7,16 +7,19 @@ alt + F1
 alt + F2
    /home/zed/.config/scripts/htop.sh
 
-# alt + F3
-#   /home/zed/.config/scripts/discord.sh
+alt + F3
+  /home/zed/.config/scripts/discord.sh
 
-#alt + F4
-#   /home/zed/.config/scripts/telegram.sh
+alt + F4
+   /home/zed/.config/scripts/telegram.sh
 
 alt + g
 	 ~/.config/scripts/gpu_temp.sh
 
 alt + x
+ kitty -e "vifm" /mnt/FILES/Courses/
+
+alt + w
  kitty -e "vifm" /mnt/FILES/Watch
 
 alt + c
@@ -29,7 +32,8 @@ alt + o
 	 ~/.config/scripts/c/old_project.sh
 
 alt + s
-	feh -F "/mnt/FILES/My_Stuff/schedule.png"
+	feh -F "/mnt/FILES/My_Stuff/summer_plan.png"
+  #zathura --mode fullscreen "/mnt/FILES/My_Stuff/summer_plan.df"	
 
 alt + t
 	feh -F "/mnt/FILES/My_Stuff/uni.png"
@@ -61,6 +65,15 @@ alt + d
 #alt + shift + y
 #	sudo /home/zed/.config/scripts/web_blocker.sh
 
+#alt + m 
+#	/mnt/FILES/My_Stuff/sftp_m.sh
+
+#alt + t 
+#	/mnt/FILES/My_Stuff/sftp_s.sh
+
+super + g 
+  nohup /home/zed/PhpStorm-241.18034.69/bin/phpstorm.sh >/dev/null 2>&1 &
+
 alt + p 
   pavucontrol
 
@@ -68,11 +81,11 @@ alt + p
 super + Return
 	kitty
 
-#super + d
-#	discord
+super + d
+	discord
 
-#super + b
-#	virtualbox
+super + b
+	virtualbox
 
 super + p
   rofi -show drun -line padding 4 -hide-scrollbar -show-icons
@@ -83,11 +96,11 @@ super + n
 super + w 
   chromium
 
-#super + t 
-#  telegram-desktop
+super + t 
+  telegram-desktop
 
 super + c 
-	code-oss
+	code
 
 shift + Print
   /home/zed/.config/scripts/markdown/md_img_clipboard.sh
@@ -95,8 +108,8 @@ shift + Print
 Print
   flameshot gui
 
-alt + w
- 	rofi -show
+#alt + w
+# 	rofi -show
 
 # Audio Keybindings
 super + Next

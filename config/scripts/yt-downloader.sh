@@ -12,13 +12,29 @@ get_choice() {
     echo "$choice"
 }
 
-# Function to download video or playlist
-download() {
+# Function to download a single video
+download_video() {
     local url="$1"
     local output_format="$2"
 
-    echo "Downloading..."
-    yt-dlp -S "height:720"  -o "$output_format" "$url"
+    echo "Downloading video..."
+    yt-dlp -S "height:720" --write-description -o "$output_format" "$url"
+
+    # Check if the download was successful
+    if [ $? -eq 0 ]; then
+        # Display notification if download is completed successfully
+        notify-send --expire-time=120000 --urgency=critical "Wake Up!" "Download Completed"
+    else
+        echo "Download failed."
+    fi
+}
+
+# Function to download a playlist
+download_playlist() {
+    local url="$1"
+
+    echo "Downloading playlist..."
+    yt-dlp -S "height:720" --write-description --yes-playlist -o "$target_directory/%(playlist_index)02d - %(title)s/%(playlist_index)02d - %(title)s.%(ext)s" "$url"
 
     # Check if the download was successful
     if [ $? -eq 0 ]; then
@@ -34,16 +50,15 @@ url=$(xclip -o -selection clipboard)
 
 # Check for video quality options
 output_format_video="%(title)s.%(ext)s"
-output_format_playlist="%(playlist_index)s - %(title)s.%(ext)s"
 
 choice=$(get_choice)
 
 case "$choice" in
     1)
-        download "$url" "$output_format_video"
+        download_video "$url" "$output_format_video"
         ;;
     2)
-        download "$url" "$output_format_playlist"
+        download_playlist "$url"
         ;;
     *)
         echo "Invalid choice. Please enter '1' or '2'."

@@ -30,10 +30,13 @@ The script installs the necessary packages and applications required for daily d
 
 ## Previews
 
-![Screenshot 1](%5Bign%5D/s1.png)
-![Screenshot 2](%5Bign%5D/s2.png)
+![Screenshot 1](./[ign]/s1.jpg)
+![Screenshot 2](./[ign]/s2.jpg)
+![Screenshot 3](./[ign]/s3.jpg)
+![Screenshot 4](./[ign]/s4.jpg)
+![Screenshot 5](./[ign]/s5.jpg)
 
-______________________________________________________________________
+---
 
 ## Pre-Installation
 
