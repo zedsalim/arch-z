@@ -16,6 +16,7 @@ PKGS=(
     'xdg-user-dirs'          # Tool to manage user directories
     'xdotool'                # Automation tool
     'xbindkeys'              # Keyboard binding configuration
+    'pacman-contrib'         # Contributed scripts and tools for pacman systems
 
     # Section 2: Window Manager Tools
     # 'brightnessctl'          # Backlight control

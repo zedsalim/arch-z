@@ -9,13 +9,14 @@ exec_always feh --bg-fill ~/.config/wallpapers/wallpaper.jpg
 exec_always --no-startup-id ~/.config/i3/autostart.sh
 exec --no-startup-id ~/.config/scripts/help_notification.sh
 exec --no-startup-id ~/.config/scripts/resolution.sh
+exec --no-startup-id  notify-send "Welcome back $USER! 🖐🏻 It's time to work"
 ######################################
 #              Vars
 
 set $mod Mod4
 set $alt Mod1 
-set $g_inner 4
-set $g_outer 1
+set $g_inner 5
+set $g_outer 8
 # smart_borders on
 ######################################
 #             Theme
@@ -25,8 +26,8 @@ font pango:DejaVu Sans Mono 10
 new_window 1pixel
 gaps inner $g_inner
 gaps outer $g_outer
-default_border pixel 2
-default_floating_border pixel 2
+default_border pixel 3
+default_floating_border pixel 3
 floating_modifier $mod
 bindsym $mod+q kill
 
@@ -102,7 +103,29 @@ for_window [class="qBittorrent"] floating enable border normal
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
 
+# bar {
+#     font pango: Hack Nerd Font 10
+#     position top
+#     status_command i3blocks -c ~/.config/i3blocks/i3blocks.conf
+#     strip_workspace_numbers yes
+# }
+
 bar {
-    position top
+    font pango: Hack Nerd Font 10
     status_command i3blocks -c ~/.config/i3blocks/i3blocks.conf
+    position top
+    strip_workspace_numbers yes
+
+    colors {
+        background #282A36
+        statusline #F8F8F2
+        separator  #44475A
+
+        focused_workspace  #44475A #2c5474 #F8F8F2
+        active_workspace   #282A36 #2c5474 #F8F8F2
+        inactive_workspace #282A36 #282A36 #BFBFBF
+        urgent_workspace   #FF5555 #FF5555 #F8F8F2
+        binding_mode       #FF5555 #FF5555 #F8F8F2
+    }
 }
+

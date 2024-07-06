@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Get volume percentage and mute status
-volume_info=$(pactl list sinks | grep 'Volume:' | awk 'NR==3{print $5}' | sed 's/%//')
-mute_status=$(pactl list sinks | grep 'Mute:' | awk 'NR==2{print $2}')
+volume_info=$(pactl list sinks | grep 'Volume:' | head -n 1 | awk '{print $5}' | tr -d '%')
+mute_status=$(pactl list sinks | grep 'Mute:' | head -n 1 | awk '{print $2}')
 
 if [ "$mute_status" = "yes" ]; then
     echo "🔇"
