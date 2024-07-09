@@ -4,11 +4,27 @@ echo "separator=true
 separator_block_width=15
 
 [time]
-command=date '+%Y-%m-%d %H:%M                                                        +%Y-%m-%d %H:%M'
+command=date '+%Y-%m-%d %H:%M                                                 '
+command=date '+%Y-%m-%d %H:%M                                                 +%Y-%m-%d %H:%M'
 interval=1
+
+[arch_update]
+color=#1793d1
+command=echo "$(checkupdates | wc -l) "
+interval=once
+label= 
+border=#1793d1
+border_top=0
+border_right=1
+border_bottom=0
+border_left=0
 
 [cpu]
 command=~/.config/i3blocks/scripts/cpu.sh
+interval=5
+
+[gpu]
+command=~/.config/i3blocks/scripts/gpu.sh
 interval=5
 
 [ram]
