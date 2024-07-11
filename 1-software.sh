@@ -35,6 +35,8 @@ PKGS=(
     'gvfs-mtp'               # MTP support for file managers
     'dosfstools'             # Managing FAT file systems
     'ntfs-3g'                # Managing NTFS file systems
+    'at'
+    'iptables'
 
     # Section 3: File Managers
     'vifm'                 # Terminal file manager
