@@ -23,7 +23,35 @@
     "command": "workbench.action.terminal.kill",
     "when": "terminalFocus"
   },
+  // Toggle between terminal and editor focus
+  {
+    "key": "ctrl+up",
+    "command": "workbench.action.terminal.focus"
+  },
+  {
+    "key": "ctrl+up",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+down",
+    "command": "workbench.action.terminal.focus"
+  },
+  {
+    "key": "ctrl+down",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "terminalFocus"
+  },
   // FILE TREE
+  {
+    "key": "ctrl+right",
+    "command": "workbench.action.focusFirstEditorGroup",
+    "when": "explorerViewletVisible && !editorFocus"
+  },
+  {
+    "key": "ctrl+left",
+    "command": "workbench.view.explorer"
+  },
   {
     "command": "workbench.action.toggleSidebarVisibility",
     "key": "ctrl+e"
