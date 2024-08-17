@@ -81,6 +81,13 @@ for_window [title="py-Ccal"] move scratchpad
 for_window [title="py-Ccal"] border pixel 5
 bindsym $alt+BackSpace [title="py-Ccal"] scratchpad show; move position center
 
+for_window [class="thunderbird"] floating enable
+for_window [class="thunderbird"] resize set 1700 1000
+for_window [class="thunderbird"] move scratchpad
+for_window [class="thunderbird"] border pixel 3
+bindsym $mod+e [class="thunderbird"] scratchpad show; move position center
+
+
 # Set Kitty to floating mode and move to top-left with increased height (for listing projects)
 for_window [class="KittyC"] floating enable, move position 0 28, resize set 25 ppt 97 ppt
 

@@ -29,12 +29,15 @@ kitty --title ttimmerr &
 pkill -f "kitty --title py-Ccal"
 kitty --title py-Ccal --hold python -q &
 
+pkill -f "thunderbird"
+thunderbird &
+
 ibus-daemon -drx &
 
-sleep 2
+sleep 1
 ibus engine xkb:fr:latin9:fra &
 
-# setxkbmap -option "caps:escape_shifted_capslock" &
-setxkbmap -option "caps:escape" &
+setxkbmap -option "caps:escape_shifted_capslock" &
+# setxkbmap -option "caps:escape" &
 
 xset r rate 300 50
