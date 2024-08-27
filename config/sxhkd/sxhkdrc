@@ -79,7 +79,7 @@ alt + p
 
 # Programs
 super + Return
-	kitty
+	kitty -e tmux
 
 super + d
 	discord
