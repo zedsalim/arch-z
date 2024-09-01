@@ -42,8 +42,8 @@ bindsym $mod+Shift+z	gaps inner current minus 5
 ######################################
 #    	 System keybindings
 
-bindsym $mod+Shift+b exec "reboot"
-bindsym $mod+Shift+s exec "poweroff"
+bindsym $mod+Shift+b exec "tmux kill-server && reboot"
+bindsym $mod+Shift+s exec "tmux kill-server && poweroff"
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $alt+Shift+s layout stacking
