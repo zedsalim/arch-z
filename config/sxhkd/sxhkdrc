@@ -16,6 +16,9 @@ alt + F4
 alt + g
 	 ~/.config/scripts/gpu_temp.sh
 
+alt + v
+  /mnt/FILES/My_Stuff/check_vpn.sh
+
 alt + x
  kitty -e "vifm" /mnt/FILES/Courses/
 
