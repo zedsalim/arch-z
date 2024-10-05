@@ -1,8 +1,6 @@
 <br />
 <div align="center">
-  <a href="https://github.com/zedsalim/arch-z">
-    <img src="[ign]/logo.png" alt="Logo" width="70%">
-  </a>
+    <img src="https://raw.githubusercontent.com/zedsalim/arch-z/refs/heads/master/%5Bign%5D/logo.png" alt="Logo" width="70%">
 
 <h3 align="center">Arch Minimal Setup with i3</h3>
 
