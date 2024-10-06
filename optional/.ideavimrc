@@ -1,0 +1,128 @@
+"source ~/.vimrc
+let mapleader=' '
+" Don't use Ex mode, use Q for formatting.
+map Q gq
+
+set relativenumber
+set scrolloff=8
+set history=1000
+set visualbell
+set showmode
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+set gdefault
+set notimeout
+set timeoutlen=5000
+set showmode
+"set highlightedyank
+set NERDTree
+set sneak
+set easymotion
+set clipboard+=unnamed
+
+nmap <leader>n :NERDTreeToggle<CR>
+
+nnoremap <c-d> <c-d>zz
+nnoremap <c-u> <c-u>zz
+
+" continuous shift
+xnoremap < <gv
+xnoremap > >gv
+
+" Increment by 1 (default)
+nmap <C-a> <C-a>
+" Decrement by 1 (default)
+nmap <C-x> <C-x>
+
+nmap <Esc> :nohlsearch<CR>
+
+" Window navigation
+nnoremap <leader>sv :action SplitVertically<CR>
+nnoremap <leader>sh :action SplitHorizontally<CR>
+nnoremap <leader>us :action Unsplit<CR>
+
+nnoremap <C-s> :w<CR>
+nnoremap <C-q> :q!<CR>
+inoremap <C-s> <Esc>:w<CR>a
+inoremap <C-q> <Esc>:q!<CR>a
+
+" Tab navigation
+nmap <Tab> :action NextTab<CR>
+nmap <C-Left> <C-W>h
+nmap <C-Right> <C-W>l
+nmap <C-Up> <C-W>k
+nmap <C-Down> <C-W>j
+
+" Finding things
+"nnoremap <leader>st :action FindInPath<CR>
+"nnoremap <leader>sf :action GotoFile<CR>
+"nnoremap <leader>ls :action ActivateStructureToolWindow<CR>
+"noremap <leader>fs :action FileStructurePopup<CR>
+"nnoremap <leader>o :action RecentFiles<CR>
+
+" Code completion
+"nnoremap <c-z> :action GotoAction<CR>
+"nnoremap <c-t> :action ActivateTerminalToolWindow<CR>
+"nnoremap <c-p> :action RecentFiles<CR>
+"nnoremap <c-r> :action RunMenu<CR>
+"nnoremap <c-g> :action Generate<CR>
+"nnoremap <leader><Tab> :action ShowNavBar<CR>
+
+" Jump
+"nmap [b :action PreviousTab<CR>
+"nmap ]b :action NextTab<CR>
+"nmap [g :action GotoPreviousError<CR>
+"nmap ]g :action GotoNextError<CR>
+"nmap [u :action GotoPrevElementUnderCaretUsage<CR>
+"nmap ]u :action GotoNextElementUnderCaretUsage<CR>
+"nmap [o :action PreviousOccurence<CR>
+"nmap ]o :action NextOccurence<CR>
+"nmap [m :action MethodUp<CR>
+"nmap ]m :action MethodDown<CR>
+"nmap [c :action JumpToLastChange<CR>
+"nmap ]c :action JumpToNextChange<CR>
+
+" LSP
+"nnoremap <leader>lr :action RenameElement<CR>
+"nnoremap <leader>lR :action RenameFile<CR>
+"nnoremap <leader>lf :action ReformatCode<CR>
+"nnoremap <leader>r :action Refactorings.QuickListPopupAction<CR>
+"nnoremap <leader>la :action ShowIntentionActions<CR>
+"nnoremap <leader>ll :action ActivateProblemsViewToolWindow<CR>
+" gotos
+"nmap <leader>a :action GotoAction<CR>
+"nmap ga :action GotoAction<CR>
+"nmap gf :action GotoFile<CR>
+"nmap gs :action GotoSymbol<CR>
+"nmap gT :action TextSearchAction<CR>
+"nmap go :action GotoSuperMethod<CR>
+"nmap gd :action GotoDeclaration<CR>
+"nmap gD :action GotoTypeDeclaration<CR>
+"nmap gi :action GotoImplementation<CR>
+"nmap gI :action QuickImplementations<CR>
+"nmap gn :action ShowNavBar<CR>
+"nmap gr :action FindUsages<CR>
+
+" Todo
+nmap <leader>to :action ActivateTODOToolWindow<CR>
+
+" Menu
+"nmap <leader>mm :action MainMenu<CR>
+"nmap <leader>ma :action AnalyzeMenu<CR>
+"nmap <leader>mb :action BuildMenu<CR>
+"nmap <leader>mc :action CodeMenu<CR>
+"nmap <leader>mf :action FindMenuGroup<CR>
+"nmap <leader>mg :action GoToMenu<CR>
+"nmap <leader>ms :action ScopeViewPopupMenu<CR>
+"nmap <leader>mt :action EditorTabPopupMenu<CR>
+"nmap <leader>mw :action ToolWindowsGroup<CR>
+
+"sethandler <c-j> a:vim
+"sethandler <c-k> a:vim
+
+Plug 'preservim/nerdtree'
+Plug 'easymotion/vim-easymotion'
+Plug 'tpope/vim-commentary'
+Plug 'machakann/vim-highlightedyank'

@@ -8,12 +8,13 @@ exec_always feh --bg-fill ~/.config/wallpapers/wallpaper.jpg
 # exec_always --no-startup-id ~/.fehbg
 exec_always --no-startup-id ~/.config/i3/autostart.sh
 exec --no-startup-id ~/.config/scripts/resolution.sh
+exec --no-startup-id  notify-send "Welcome back $USER! 🖐🏻 It's time to work"
 ######################################
 #              Vars
 
 set $mod Mod4
 set $alt Mod1 
-set $g_inner 3
+set $g_inner 4
 set $g_outer 1
 # smart_borders on
 ######################################
@@ -21,11 +22,11 @@ set $g_outer 1
 
 
 font pango:DejaVu Sans Mono 10
-# new_window 1pixel
+new_window 1pixel
 gaps inner $g_inner
 gaps outer $g_outer
-# default_border pixel 3
-# default_floating_border pixel 3
+default_border pixel 3
+default_floating_border pixel 3
 floating_modifier $mod
 bindsym $mod+q kill
 
@@ -40,8 +41,8 @@ bindsym $mod+Shift+z	gaps inner current minus 5
 ######################################
 #    	 System keybindings
 
-bindsym $mod+Shift+b exec "tmux kill-server && reboot"
-bindsym $mod+Shift+s exec "tmux kill-server && poweroff"
+bindsym $mod+Shift+b exec "reboot"
+bindsym $mod+Shift+s exec "poweroff"
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $alt+Shift+s layout stacking
@@ -79,13 +80,6 @@ for_window [title="py-Ccal"] move scratchpad
 for_window [title="py-Ccal"] border pixel 5
 bindsym $alt+BackSpace [title="py-Ccal"] scratchpad show; move position center
 
-for_window [class="thunderbird"] floating enable
-for_window [class="thunderbird"] resize set 1700 1000
-for_window [class="thunderbird"] move scratchpad
-for_window [class="thunderbird"] border pixel 3
-bindsym $mod+e [class="thunderbird"] scratchpad show; move position center
-
-
 # Set Kitty to floating mode and move to top-left with increased height (for listing projects)
 for_window [class="KittyC"] floating enable, move position 0 28, resize set 25 ppt 97 ppt
 
@@ -109,29 +103,8 @@ for_window [class="qBittorrent"] floating enable border normal
 for_window [urgent=latest] focus
 
 # bar {
-#     font pango: Hack Nerd Font 10
 #     position top
 #     status_command i3blocks -c ~/.config/i3blocks/i3blocks.conf
-#     strip_workspace_numbers yes
-# }
-
-# bar {
-#     font pango: Hack Nerd Font 10
-#     status_command i3blocks -c ~/.config/i3blocks/i3blocks.conf
-#     position top
-#     strip_workspace_numbers yes
-#
-#     colors {
-#         background #282A36
-#         statusline #F8F8F2
-#         separator  #44475A
-#
-#         focused_workspace  #44475A #44475A #F8F8F2
-#         active_workspace   #282A36 #44475A #F8F8F2
-#         inactive_workspace #282A36 #282A36 #BFBFBF
-#         urgent_workspace   #FF5555 #FF5555 #F8F8F2
-#         binding_mode       #FF5555 #FF5555 #F8F8F2
-#     }
 # }
 
 bar {
@@ -145,11 +118,10 @@ bar {
         statusline #F8F8F2
         separator  #44475A
 
-        focused_workspace  #44475A #2c5474 #F8F8F2
-        active_workspace   #282A36 #2c5474 #F8F8F2
+        focused_workspace  #44475A #44475A #F8F8F2
+        active_workspace   #282A36 #44475A #F8F8F2
         inactive_workspace #282A36 #282A36 #BFBFBF
         urgent_workspace   #FF5555 #FF5555 #F8F8F2
         binding_mode       #FF5555 #FF5555 #F8F8F2
     }
 }
-

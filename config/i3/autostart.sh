@@ -23,8 +23,8 @@ kitty --title DDropdown -e tmux new-session \; split-window -v &
 # pkill -f "kitty --title dropdown -e tmux new-session \; split-window -v"
 # kitty --title dropdown -e tmux new-session 'bc' \; send-keys -t 0 C-l \; split-window -v \; select-pane -t 0 &
 
-pkill -f "kitty --title ttimmerr"
-kitty --title ttimmerr &
+pkill -f "kitty --title ttimmerr -e nvim /tmp/tmp.md"
+kitty --title ttimmerr -e nvim /tmp/tmp.md &
 
 pkill -f "kitty --title py-Ccal"
 kitty --title py-Ccal --hold python -q &
@@ -34,7 +34,7 @@ thunderbird &
 
 ibus-daemon -drx &
 
-sleep 1
+sleep 2
 ibus engine xkb:fr:latin9:fra &
 
 setxkbmap -option "caps:escape_shifted_capslock" &

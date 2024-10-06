@@ -35,6 +35,7 @@ cp -r optional/synth-shell ~/.config
 cp optional/.bashrc ~/
 cp optional/.inputrc ~/
 cp optional/.vimrc ~/
+cp optional/.ideavimrc ~/
 cp optional/settings.json ~/.config/Code/User/
 cp optional/keybindings.json ~/.config/Code/User/
 cp config/.fehbg ~/
