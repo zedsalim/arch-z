@@ -30,19 +30,20 @@ cp -r config/kitty/ ~/.config
 cp config/picom.conf ~/.config
 cp config/guide.pdf ~/.config
 cp config/pdf_bookmarks.txt ~/.config
-cp config/ufetch /usr/local/bin/
+cp config/ufetch /.local/bin/
 cp -r optional/synth-shell ~/.config
 cp optional/.bashrc ~/
 cp optional/.inputrc ~/
 cp optional/.vimrc ~/
 cp optional/.ideavimrc ~/
+mkdir -p ~/.config/Code/User/
 cp optional/settings.json ~/.config/Code/User/
 cp optional/keybindings.json ~/.config/Code/User/
 cp config/.fehbg ~/
 cp config/.tmux.conf ~/
 cp -r scripts ~/
-chmod +x ~/.config/i3/autostart.sh
-chmod +x ~/.config/i3/scripts/*
+# chmod +x ~/.config/i3/autostart.sh
+# chmod +x ~/.config/i3/scripts/*
 
 cd
 if [[ ! -d ~/.config/gtk-3.0 ]]; then
