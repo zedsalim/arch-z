@@ -4,9 +4,6 @@ F1
 F2
   setxkbmap -option "caps:escape"
 
-super + space
-  pkill -f "أيات"
-
 alt + F1
   /home/zed/Downloads/NET/fr_image2text.sh
    

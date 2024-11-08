@@ -42,5 +42,5 @@ setxkbmap -option "caps:escape_shifted_capslock" &
 
 xset r rate 300 50 &
 
-pkill -f "أيات"
+pkill -f "/bin/bash ~/.config/scripts/ayats.sh"
 /bin/bash ~/.config/scripts/ayats.sh
