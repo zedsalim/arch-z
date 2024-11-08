@@ -40,4 +40,7 @@ ibus engine xkb:fr:latin9:fra &
 setxkbmap -option "caps:escape_shifted_capslock" &
 # setxkbmap -option "caps:escape" &
 
-xset r rate 300 50
+xset r rate 300 50 &
+
+pkill -f "أيات"
+/bin/bash ~/.config/scripts/ayats.sh

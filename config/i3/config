@@ -94,6 +94,7 @@ for_window [class="KittySftp"] floating enable, move position center, resize set
 
 # Open specific applications in floating mode
 for_window [title="alsamixer"] floating enable border pixel 1
+for_window [class="Yad"] floating enable border pixel 4
 for_window [class="gnome-disks"] floating enable border pixel 1
 for_window [class="dosbox"] floating disable
 for_window [class="Galculator"] floating enable border pixel 1

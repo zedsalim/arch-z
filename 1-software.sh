@@ -15,6 +15,7 @@ PKGS=(
     'xorg-xauth'             # X authority utility
     'xdg-user-dirs'          # Tool to manage user directories
     'xdotool'                # Automation tool
+    'wmctrl'                 # Window management tool
     'xbindkeys'              # Keyboard binding configuration
     'pacman-contrib'         # Contributed scripts and tools for pacman systems
 
@@ -26,6 +27,7 @@ PKGS=(
     'i3blocks'               # Status bar
     'dunst'                  # Notification daemon
     'libnotify'              # Notification library
+    'yad'                    # Enhanced dialog tool
     'picom'                  # Compositor
     'kitty'                  # Terminal emulator
     'lxappearance'           # GTK+ theme switcher
