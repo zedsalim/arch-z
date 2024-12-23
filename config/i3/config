@@ -13,7 +13,7 @@ exec --no-startup-id ~/.config/scripts/resolution.sh
 
 set $mod Mod4
 set $alt Mod1 
-set $g_inner 3
+set $g_inner 4
 set $g_outer 1
 # smart_borders on
 ######################################
@@ -24,7 +24,7 @@ font pango:DejaVu Sans Mono 10
 # new_window 1pixel
 gaps inner $g_inner
 gaps outer $g_outer
-# default_border pixel 3
+default_border pixel 2
 # default_floating_border pixel 3
 floating_modifier $mod
 bindsym $mod+q kill
@@ -64,19 +64,19 @@ bindsym $mod+g focus mode_toggle
 for_window [title="DDropdown"] floating enable
 for_window [title="DDropdown"] resize set 1200 850
 for_window [title="DDropdown"] move scratchpad
-for_window [title="DDropdown"] border pixel 5
+for_window [title="DDropdown"] border pixel 3
 bindsym $mod+Shift+Return [title="DDropdown"] scratchpad show; move position center
 
 for_window [title="ttimmerr"] floating enable
 for_window [title="ttimmerr"] resize set 1200 850
 for_window [title="ttimmerr"] move scratchpad
-for_window [title="ttimmerr"] border pixel 5
+for_window [title="ttimmerr"] border pixel 3
 bindsym $mod+Shift+BackSpace [title="ttimmerr"] scratchpad show; move position center
 
 for_window [title="py-Ccal"] floating enable
 for_window [title="py-Ccal"] resize set 400 200
 for_window [title="py-Ccal"] move scratchpad
-for_window [title="py-Ccal"] border pixel 5
+for_window [title="py-Ccal"] border pixel 3
 bindsym $alt+BackSpace [title="py-Ccal"] scratchpad show; move position center
 
 for_window [class="thunderbird"] floating enable
@@ -94,7 +94,7 @@ for_window [class="KittySftp"] floating enable, move position center, resize set
 
 # Open specific applications in floating mode
 for_window [title="alsamixer"] floating enable border pixel 1
-for_window [class="Yad"] floating enable border pixel 4
+for_window [class="Yad"] floating enable border pixel 3
 for_window [class="gnome-disks"] floating enable border pixel 1
 for_window [class="dosbox"] floating disable
 for_window [class="Galculator"] floating enable border pixel 1

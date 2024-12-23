@@ -28,9 +28,18 @@
     icon_position = off
     icon_folders = /usr/share/icons/Papirus-Dark/16x16/status/:/usr/share/icons/Papirus-Dark/16x16/devices/
 
+[application|Thunderbird]
+  font = "Sans 12"
+  background = "#007f00"
+  foreground = "#ffffff"
+  timeout = 10
+  icon_position = left
+  padding = 10
+
+
 [frame]
     width = 3
-    color = "#878787"
+    color = "#fff"
 
 [shortcuts]
     close = ctrl+space
@@ -40,15 +49,15 @@
 
 [urgency_low]
     background = "#181818"
-    foreground = "#878787"
+    foreground = "#fff"
     frame_color = "#878787"
-    timeout = 4
+    timeout = 10
 
 [urgency_normal]
     background = "#181818"
-    foreground = "#878787"
+    foreground = "#fff"
     frame_color = "#878787"
-    timeout = 4
+    timeout = 0
 
 [urgency_critical]
     background = "#ab4642"

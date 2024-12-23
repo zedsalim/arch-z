@@ -27,7 +27,7 @@ PKGS=(
     'i3blocks'               # Status bar
     'dunst'                  # Notification daemon
     'libnotify'              # Notification library
-    'yad'                    # Enhanced dialog tool
+    #'yad'                    # Enhanced dialog tool
     'picom'                  # Compositor
     'kitty'                  # Terminal emulator
     'lxappearance'           # GTK+ theme switcher
@@ -105,7 +105,7 @@ PKGS=(
     # 'galculator'             # Calculator
     'zathura-pdf-poppler'    # PDF viewer
     'qbittorrent'            # BitTorrent client
-    'transmission-cli'       # command-line BitTorrent client
+    #'transmission-cli'       # command-line BitTorrent client
     # 'discord'                # Messaging and VoIP social platform
 
     # Section 13: Miscellaneous Utilities
@@ -113,7 +113,7 @@ PKGS=(
     'exa'                    # Replacement for 'ls' command
     'xclip'                  # Command line interface to X selections
     'npm'                    # Package manager for JavaScript
-    'jdk-openjdk'            # Java Development Kit
+    #'jdk-openjdk'            # Java Development Kit
 
     # Section 14: Drivers
     'nvidia'

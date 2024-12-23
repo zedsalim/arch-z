@@ -2,7 +2,7 @@
 
 # Run Flameshot GUI with a custom save path
 # flameshot_gui_output=$(flameshot gui -p /mnt/FILES/MD_IMGS 2>&1)
-flameshot_gui_output=$(flameshot gui -p /mnt/FILES/Notes/IMGs 2>&1)
+flameshot_gui_output=$(flameshot gui -p /mnt/FILES/My_Stuff/_NOTES/_IMGs 2>&1)
 
 # Check if Flameshot capture was successful
 if [ $? -eq 0 ]; then

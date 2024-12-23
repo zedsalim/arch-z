@@ -1,8 +1,6 @@
 
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
-# nvidia-settings -a "[gpu:0]/GPUFanControlState=1" -a "[fan:0]/GPUTargetFanSpeed=20" -a "[fan:1]/GPUTargetFanSpeed=20" &
-
 picom --config ~/.config/picom.conf &
 dunst &
 
@@ -19,9 +17,6 @@ sxhkd -c ~/.config/sxhkd/sxhkdrc &
 
 pkill -f "kitty --title DDropdown -e tmux new-session \; split-window -v"
 kitty --title DDropdown -e tmux new-session \; split-window -v &
-
-# pkill -f "kitty --title dropdown -e tmux new-session \; split-window -v"
-# kitty --title dropdown -e tmux new-session 'bc' \; send-keys -t 0 C-l \; split-window -v \; select-pane -t 0 &
 
 pkill -f "kitty --title ttimmerr -e nvim /tmp/tmp.md"
 kitty --title ttimmerr -e nvim /tmp/tmp.md &

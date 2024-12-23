@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sleep 5
+# sleep 5
 
 adhkars=(
     "إِنَّ الَّذِينَ قَالُوا رَبُّنَا اللَّهُ ثُمَّ اسْتَقَامُوا تَتَنَزَّلُ عَلَيْهِمُ الْمَلَائِكَةُ أَلَّا تَخَافُوا وَلَا تَحْزَنُوا وَأَبْشِرُوا بِالْجَنَّةِ الَّتِي كُنتُمْ تُوعَدُونَ" 
@@ -17,7 +17,7 @@ adhkars=(
     "مَنْ عَمِلَ سَيِّئَةً فَلَا يُجْزَىٰ إِلَّا مِثْلَهَا ۖ وَمَنْ عَمِلَ صَالِحًا مِّن ذَكَرٍ أَوْ أُنثَىٰ وَهُوَ مُؤْمِنٌ فَأُولَٰئِكَ يَدْخُلُونَ الْجَنَّةَ يُرْزَقُونَ فِيهَا بِغَيْرِ حِسَابٍ"
 )
 
-interval=600  # 600 seconds = 10 minutes
+interval=1200 
 
 get_width() {
     local text="$1"
@@ -34,10 +34,13 @@ get_width() {
 display_adhkar() {
     while true; do
         for adhkar in "${adhkars[@]}"; do
-            width=$(get_width "$adhkar")
+            # width=$(get_width "$adhkar")
+            #
+            # yad --text-align=center --text="<span font='24'>$adhkar</span>" \
+            #     --title="أيات" --width=$width --height=100 --button=Close --fixed
 
-            yad --text-align=center --text="<span font='20'>$adhkar</span>" \
-                --title="أيات" --width=$width --height=100 --button=Close --fixed
+            # notify-send "أيات" "$adhkar"
+            notify-send -u low --hint=int:transient:1 " " "<span size='xx-large'>$adhkar</span>"
 
             sleep $interval
         done

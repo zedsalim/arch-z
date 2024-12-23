@@ -4,27 +4,6 @@ F1
 F2
   setxkbmap -option "caps:escape"
 
-alt + F1
-  /home/zed/Downloads/NET/fr_image2text.sh
-   
-alt + F2
-  /home/zed/Downloads/NET/ar_image2text.sh
-
-alt + F3
-   /home/zed/Downloads/NET/eng_image2text.sh
-
-alt + F4
-   /home/zed/.config/scripts/chromium.sh
-
-alt + F5
-   /home/zed/.config/scripts/htop.sh
-
-alt + F6
-  /home/zed/.config/scripts/discord.sh
-
-alt + F7
-   /home/zed/.config/scripts/telegram.sh
-
 alt + v
   /mnt/FILES/My_Stuff/check_vpn.sh
 
@@ -46,12 +25,12 @@ alt + n
 alt + o
 	 ~/.config/scripts/c/old_project.sh
 
-alt + s
-	feh -F "/mnt/FILES/My_Stuff/schedule.png"
-
 alt + e
-  zathura --mode fullscreen "/mnt/FILES/My_Stuff/Workout_program.pdf"	
+	feh -F "/mnt/FILES/My_Stuff/schedule.png"
+  #zathura --mode fullscreen "/mnt/FILES/My_Stuff/summer_plan.df"	
 
+alt + s
+	feh -F "/mnt/FILES/My_Stuff/schedule_table_hd.png"
 
 alt + t
 	 ~/.config/scripts/date.sh
@@ -61,12 +40,6 @@ alt + f
 
 alt + b 
 	~/.config/scripts/bookmarks.sh
-
-alt + l
-	/mnt/FILES/My_Stuff/mytodo/todo
-
-alt + y 
-	~/.config/scripts/mpv-youtube.sh
 
 alt + u 
 	~/.config/scripts/usb_mount.sh mount
@@ -80,18 +53,6 @@ alt + shift + d
 alt + d 
 	kitty --class KittySftp -e ~/.config/scripts/yt-downloader.sh
 
-#alt + shift + y
-#	sudo /home/zed/.config/scripts/web_blocker.sh
-
-#alt + m 
-#	/mnt/FILES/My_Stuff/sftp_m.sh
-
-#alt + t 
-#	/mnt/FILES/My_Stuff/sftp_s.sh
-
-super + g 
-  nohup /home/zed/Downloads/idea-IU-242.23339.11/bin/idea.sh >/dev/null 2>&1 &
-
 alt + p 
   pavucontrol
 
@@ -99,11 +60,11 @@ alt + p
 super + Return
 	kitty -e tmux
 
+super + s 
+    /home/zed/Downloads/PhpStorm-243.21565.202/bin/phpstorm
+
 super + d
 	discord
-
-super + b
-	virtualbox
 
 super + p
   rofi -show drun -line padding 4 -hide-scrollbar -show-icons
@@ -113,9 +74,6 @@ super + n
 
 super + w 
   chromium
-
-super + t 
-  telegram-desktop
 
 super + c 
 	code

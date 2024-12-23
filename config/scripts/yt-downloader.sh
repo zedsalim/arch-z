@@ -18,12 +18,32 @@ download_video() {
     local output_format="$2"
 
     echo "Downloading video..."
-    yt-dlp -S "height:720" --write-description -o "$output_format" "$url"
+    yt-dlp -S "height:720" -o "$output_format" "$url" \
+           --add-metadata \
+           --concurrent-fragments 20 \
+           --embed-metadata \
+           --write-info-json \
+           --clean-infojson \
+           --write-comments \
+           --write-subs \
+           --sub-lang all \
+           --sub-format srt \
+           --write-description
+           # --embed-thumbnail \
+           # --write-thumbnail 
+           # --cookies cookies-youtube-com.txt \
 
     # Check if the download was successful
     if [ $? -eq 0 ]; then
         # Display notification if download is completed successfully
         notify-send --expire-time=120000 --urgency=critical "Wake Up!" "Download Completed"
+
+        # Extract chapters if they exist
+        local json_file="${output_format%.*}.info.json"
+        if [ -f "$json_file" ]; then
+            jq -r '.chapters[] | "\(.title) - \(.start_time) to \(.end_time)"' "$json_file" > "${output_format%.*}_chapters.txt"
+            echo "Chapters extracted to ${output_format%.*}_chapters.txt"
+        fi
     else
         echo "Download failed."
     fi
@@ -34,12 +54,31 @@ download_playlist() {
     local url="$1"
 
     echo "Downloading playlist..."
-    yt-dlp -S "height:720" --write-description --yes-playlist -o "$target_directory/%(playlist_index)02d - %(title)s/%(playlist_index)02d - %(title)s.%(ext)s" "$url"
+    yt-dlp -S "height:720" -o "$target_directory/%(playlist_index)02d - %(title)s/%(playlist_index)02d - %(title)s.%(ext)s" "$url" \
+           --add-metadata \
+           --concurrent-fragments 20 \
+           --embed-metadata \
+           --write-info-json \
+           --clean-infojson \
+           --write-comments \
+           --write-subs \
+           --sub-lang all \
+           --sub-format srt \
+           --write-description \
+           --yes-playlist
+
+
 
     # Check if the download was successful
     if [ $? -eq 0 ]; then
         # Display notification if download is completed successfully
         notify-send --expire-time=120000 --urgency=critical "Wake Up!" "Download Completed"
+
+        # Extract chapters for each video in the playlist
+        find "$target_directory" -name "*.info.json" | while read json_file; do
+            jq -r '.chapters[] | "\(.title) - \(.start_time) to \(.end_time)"' "$json_file" > "${json_file%.*}_chapters.txt"
+            echo "Chapters extracted to ${json_file%.*}_chapters.txt"
+        done
     else
         echo "Download failed."
     fi

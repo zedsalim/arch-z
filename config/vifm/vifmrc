@@ -76,6 +76,7 @@ set vimhelp
 " If you would like to run an executable file when you
 " press Enter, l or Right Arrow, set this.
 set norunexec
+"set runexec
 
 " Format for displaying time in file list. For example:
 " TIME_STAMP_FORMAT=%m/%d-%H:%M
@@ -161,6 +162,7 @@ command! ph pandoc -s %c -c /home/zed/.config/scripts/markdown/style.css -o %c:r
 command! tm total=0; for f in %f; do d=$(ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 "$f" | cut -d"." -f1); total=$((total + d)); done; total_minutes=$((total / 60)); echo "Total: $total_minutes minutes"; read -p "Press Enter to exit"
 command! tt total=0;for f in %f;do d=$(ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 "$f"|cut -d"." -f1);total=$((total+d));done;echo "Total: $((total/3600))h $(((total%3600)/60))m $((total%60))s"; read -p "Press Enter to exit"
 command! play nohup mpv %f >/dev/null 2>&1 &
+command! nrun nohup ./%c >/dev/null 2>&1 &
 command! ev nohup evince %f >/dev/null 2>&1 &
 command! gn nohup geany %f >/dev/null 2>&1 &
 command! itp !! ~/.config/scripts/usefull_scripts/imgs_to_pdf.sh %f
@@ -183,7 +185,7 @@ command! xz tar -cJvf %c.tar.xz %f
 command! uxz tar -xJvf %c
 command! utar tar -xvf %c
 command! ugz tar -xzvf %c
-command! send rsync -avr --progress %f "/home/zed/phone_mount/Internal shared storage/Download/"
+command! send  rsync -avr --progress %f "/home/zed/phone_mount/Internal shared storage/Download/Videos/"
 command! run !! ./%f
 command! make !!make %a
 command! mkcd :mkdir %a | cd %a
