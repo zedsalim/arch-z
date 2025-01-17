@@ -157,10 +157,11 @@ mark w /mnt/FILES/Courses/Programming/WordPress/
 command! cr ! echo "$(xclip -selection clipboard -o)" > %d/link.txt
 
 command! in ! /mnt/FILES/My_Stuff/Files/usefull_scripts/index_md.sh %c
+command! tt ! /home/zed/.config/scripts/count_videos_time.sh
 command! ph pandoc -s %c -c /home/zed/.config/scripts/markdown/style.css -o %c:r.html
 " command to collect the total duration (time) of a bunch of videos 
 command! tm total=0; for f in %f; do d=$(ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 "$f" | cut -d"." -f1); total=$((total + d)); done; total_minutes=$((total / 60)); echo "Total: $total_minutes minutes"; read -p "Press Enter to exit"
-command! tt total=0;for f in %f;do d=$(ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 "$f"|cut -d"." -f1);total=$((total+d));done;echo "Total: $((total/3600))h $(((total%3600)/60))m $((total%60))s"; read -p "Press Enter to exit"
+" command! tt total=0;for f in %f;do d=$(ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 "$f"|cut -d"." -f1);total=$((total+d));done;echo "Total: $((total/3600))h $(((total%3600)/60))m $((total%60))s"; read -p "Press Enter to exit"
 command! play nohup mpv %f >/dev/null 2>&1 &
 command! nrun nohup ./%c >/dev/null 2>&1 &
 command! ev nohup evince %f >/dev/null 2>&1 &
