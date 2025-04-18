@@ -119,6 +119,12 @@ set statusline="  Hint: %z%= %A %10u:%-7g %15s %20d  "
 " List of color schemes to try (picks the first one supported by the terminal)
 colorscheme onedark
 
+" Highlight files based on extension
+highlight /^.*\.(mp4|mkv|webm|avi|mov|flv|wmv|m4v|3gp|3g2|mpeg|mpg)$/ ctermfg=magenta
+highlight /^.*\.(mp3|flac|wav|aac|ogg|m4a|wma|alac|opus)$/ ctermfg=cyan
+highlight /^.*\.(jpg|jpeg|png|gif|bmp|svg|webp|tiff|ico)$/ ctermfg=yellow
+highlight /^.*\.(txt|md|html|css|js|py|tsx|jsx|srt)$/ ctermfg=white
+
 " ------------------------------------------------------------------------------
 " Bookmarks
 " ------------------------------------------------------------------------------
