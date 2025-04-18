@@ -1,7 +1,7 @@
 {
   "security.workspace.trust.enabled": false,
   "security.workspace.trust.untrustedFiles": "open",
-  "editor.fontSize": 19,
+  "editor.fontSize": 17,
   "window.zoomLevel": 0,
   "editor.lineNumbers": "relative",
   "git.openRepositoryInParentFolders": "never",
@@ -11,7 +11,6 @@
   "liveServer.settings.donotShowInfoMsg": true,
   "editor.formatOnSave": true,
   "editor.wordWrap": "on",
-  "workbench.iconTheme": "material-icon-theme",
   "editor.minimap.enabled": false,
   "editor.mouseWheelZoom": true,
   "editor.quickSuggestions": {
@@ -19,6 +18,9 @@
     "strings": "on"
   },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[c]": {
+    "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
+  },
   "[php]": {
     "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
   },
@@ -32,9 +34,12 @@
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[django-html][handlebars][hbs][mustache][jinja][jinja-html][nj][njk][nunjucks][twig]": {
+    "editor.defaultFormatter": "monosans.djlint"
+  },
   "editor.cursorBlinking": "phase",
   "terminal.integrated.fontWeightBold": "normal",
-  "terminal.integrated.fontFamily": "'Hack Nerd Font', monospace",
+  "terminal.integrated.fontFamily": "'Hack Nerd Font'",
   "terminal.integrated.fontSize": 18,
   "workbench.colorCustomizations": {
     "terminal.background": "#1C2023",
@@ -135,5 +140,35 @@
     { "before": ["leader", "c"], "commands": ["editor.action.commentLine"] }
   ],
   "vim.useSystemClipboard": true,
-  "keyboard.dispatch": "keyCode"
+  "keyboard.dispatch": "keyCode",
+  "hediet.vscode-drawio.resizeImages": null,
+  "workbench.editorAssociations": {
+    "*.db": "default"
+  },
+  "explorer.fileNesting.patterns": {
+    "*.ts": "${capture}.js",
+    "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+    "*.jsx": "${capture}.js",
+    "*.tsx": "${capture}.ts",
+    "tsconfig.json": "tsconfig.*.json",
+    "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lockb",
+    "*.sqlite": "${capture}.${extname}-*",
+    "*.db": "${capture}.${extname}-*",
+    "*.sqlite3": "${capture}.${extname}-*",
+    "*.db3": "${capture}.${extname}-*",
+    "*.sdb": "${capture}.${extname}-*",
+    "*.s3db": "${capture}.${extname}-*"
+  },
+  "python.createEnvironment.trigger": "off",
+  "explorer.confirmDragAndDrop": false,
+  "emmet.includeLanguages": {
+    "django-html": "html"
+  },
+  "workbench.colorTheme": "Night Coder Flame Contrast",
+  "editor.minimap.sectionHeaderFontSize": 12,
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.fontFamily": "'Hack Nerd Font'",
+  "markdown.preview.fontSize": 20,
+  "markdown.preview.lineHeight": 1.8,
+  "terminal.integrated.env.linux": {}
 }
