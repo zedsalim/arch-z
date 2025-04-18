@@ -53,25 +53,17 @@ download_video() {
 download_playlist() {
     local url="$1"
 
-    echo "Downloading playlist..."
+    echo "Downloading playlist (starting from video 2)..."
     yt-dlp -S "height:720" -o "$target_directory/%(playlist_index)02d - %(title)s/%(playlist_index)02d - %(title)s.%(ext)s" "$url" \
            --add-metadata \
            --concurrent-fragments 20 \
            --embed-metadata \
            --write-description \
-           --yes-playlist
-           # --write-info-json \
-           # --clean-infojson \
-           # --write-comments \
-           # --write-subs \
-           # --sub-lang all \
-           # --sub-format srt \
-
-
+           --yes-playlist \
+           --playlist-start 2  # Skips the first video
 
     # Check if the download was successful
     if [ $? -eq 0 ]; then
-        # Display notification if download is completed successfully
         notify-send --expire-time=120000 --urgency=critical "Wake Up!" "Download Completed"
 
         # Extract chapters for each video in the playlist

@@ -17,7 +17,7 @@ adhkars=(
     "مَنْ عَمِلَ سَيِّئَةً فَلَا يُجْزَىٰ إِلَّا مِثْلَهَا ۖ وَمَنْ عَمِلَ صَالِحًا مِّن ذَكَرٍ أَوْ أُنثَىٰ وَهُوَ مُؤْمِنٌ فَأُولَٰئِكَ يَدْخُلُونَ الْجَنَّةَ يُرْزَقُونَ فِيهَا بِغَيْرِ حِسَابٍ"
 )
 
-interval=1200 
+interval=1200  # 600 seconds = 10 minutes
 
 get_width() {
     local text="$1"
@@ -41,6 +41,7 @@ display_adhkar() {
 
             # notify-send "أيات" "$adhkar"
             notify-send -u low --hint=int:transient:1 " " "<span size='xx-large'>$adhkar</span>"
+
 
             sleep $interval
         done

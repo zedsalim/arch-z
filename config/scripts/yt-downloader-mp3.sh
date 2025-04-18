@@ -14,6 +14,7 @@ download() {
 }
 
 # Read the video URL from the clipboard
-url=$(xclip -o -selection clipboard)
+# url=$(xclip -o -selection clipboard)
+url=$(wl-paste)
 
 download "$url"
