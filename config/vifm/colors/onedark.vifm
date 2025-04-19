@@ -1,15 +1,14 @@
-
 " onedark color scheme for vifm
 
 " Reset all styles first
 highlight clear
 
-highlight Border	cterm=none	ctermfg=035	ctermbg=234
+highlight Border	cterm=none	ctermfg=035	ctermbg=default
 
 highlight TopLine	cterm=none	ctermfg=white	ctermbg=default
 highlight TopLineSel	cterm=bold	ctermfg=black	ctermbg=015
 
-highlight Win		cterm=none	ctermfg=250	ctermbg=234
+highlight Win		cterm=none	ctermfg=250	ctermbg=default
 highlight Directory	cterm=bold	ctermfg=004	ctermbg=default
 highlight CurrLine	cterm=bold,inverse	ctermfg=default	ctermbg=default
 highlight OtherLine	cterm=bold	ctermfg=default	ctermbg=default
