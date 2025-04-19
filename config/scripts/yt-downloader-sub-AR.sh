@@ -22,8 +22,7 @@ download() {
 }
 
 # Read the video URL from the clipboard
-# url=$(xclip -o -selection clipboard)
-url=$(wl-paste)
+url=$(xclip -o -selection clipboard)
 
 # Check for video quality options
 output_format_video="%(title)s.%(ext)s"

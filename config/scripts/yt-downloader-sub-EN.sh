@@ -12,7 +12,7 @@ get_choice() {
     echo "$choice"
 }
 
-# Function to download video or playlist with Arabic auto-generated captions
+# Function to download video or playlist with English auto-generated captions
 download() {
     local url="$1"
     local output_format="$2"
@@ -22,8 +22,7 @@ download() {
 }
 
 # Read the video URL from the clipboard
-# url=$(xclip -o -selection clipboard)
-url=$(wl-paste)
+url=$(xclip -o -selection clipboard)
 
 # Check for video quality options
 output_format_video="%(title)s.%(ext)s"

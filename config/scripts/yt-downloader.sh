@@ -85,8 +85,7 @@ download_playlist() {
 }
 
 # Read the video URL from the clipboard
-# url=$(xclip -o -selection clipboard)
-url=$(wl-paste)
+url=$(xclip -o -selection clipboard)
 
 
 # Check for video quality options
