@@ -29,16 +29,16 @@ cp -r config/zathura/ ~/.config
 cp -r config/kitty/ ~/.config
 cp config/picom.conf ~/.config
 cp config/guide.pdf ~/.config
-cp config/pdf_bookmarks.txt ~/.config
-cp config/ufetch /.local/bin/
 cp -r optional/synth-shell ~/.config
 cp optional/.bashrc ~/
 cp optional/.inputrc ~/
 cp optional/.vimrc ~/
 cp optional/.ideavimrc ~/
 mkdir -p ~/.config/Code/User/
-cp optional/settings.json ~/.config/Code/User/
-cp optional/keybindings.json ~/.config/Code/User/
+cp optional/vscode/settings.json ~/.config/Code/User/
+cp optional/vscode/keybindings.json ~/.config/Code/User/
+cp optional/vscodium/settings.json ~/.config/VSCodium/User/
+cp optional/vscodium/keybindings.json ~/.config/VSCodium/User/
 cp config/.fehbg ~/
 cp config/.tmux.conf ~/
 cp -r scripts ~/

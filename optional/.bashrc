@@ -87,11 +87,6 @@ fi
 # colored GCC warnings and errors
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
-# some more ls aliases
-#alias ll='ls -l'
-#alias la='ls -A'
-#alias l='ls -CF'
-
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
@@ -112,6 +107,7 @@ if ! shopt -oq posix; then
     fi
 fi
 
+alias du='du -hd 1'
 alias al='nvim ~/.bashrc'
 alias alu='source ~/.bashrc'
 alias ll='ls -l'
@@ -125,57 +121,36 @@ alias v='nvim'
 alias vf='vifm'
 alias vfi='vifm .'
 alias h='htop'
-alias py='bpython'
+alias py='python'
 alias t='tmux'
 alias tls='tmux list-sessions'
 alias ts='tmux switch-client -t'
 alias ta='tmux attach-session -t'
 alias tka='tmux kill-server'
 alias tk='tmux kill-session -t'
-alias r='ranger'
 alias dw='bash ~/.config/scripts/set-double-display-warmer.sh'
 alias dn='bash ~/.config/scripts/set-double-display-normal.sh'
 alias sw='bash ~/.config/scripts/set-single-display-warmer.sh'
 alias sn='bash ~/.config/scripts/set-single-display-normal.sh'
-alias l='bash ~/.config/scripts/leetcode/create_solution_file.sh'
-alias lg='bash ~/.config/scripts/leetcode/add_leetcode_problem_to_website.sh'
-# alias c='bash ~/.config/scripts/c/compile.sh'
-alias c='gcc -Wall -Wextra -lm main.c
-./a.out'
-alias za='cd ~/Documents/github/zedsalim/arch-z/'
 alias sts='git status'
-alias add='git add .'
-alias cmt='git commit -m'
-alias push='git push'
 alias pi='sudo pacman -S'
+alias py='sudo pacman -Sy'
 alias pu='sudo pacman -Syu'
+alias pr='sudo pacman -Rns'
 alias up='fusermount -u ~/phone_mount'
 alias mp='jmtpfs ~/phone_mount'
-alias caps='setxkbmap -option "caps:escape"'
+alias caps='setxkbmap -option "caps:escape_shifted_capslock"'
 alias speed='xset r rate 300 50'
-alias 9='timer 90'
-alias chat='cd ~/Downloads/chat/ && source venv/bin/activate && python app.py'
-alias md='cd ~/Documents/moodle-scraper/ && source venv/bin/activate && python main.py && deactivate'
 alias dls='docker ps -a'
-alias ser='ssh server@192.168.1.202'
-# alias prox='ssh root@192.168.1.201'
-alias bat='ssh -n -q server@192.168.1.202 bat'
-alias cpu='ssh -n -q server@192.168.1.202 sensors'
-alias sw='/bin/bash /mnt/FILES/My_Stuff/rsync_win.sh'
-alias sl='/bin/bash /mnt/FILES/My_Stuff/rsync_linux.sh'
-alias soff='ssh -n -q server@192.168.1.202 "sudo shutdown now"'
-alias sreb='ssh -n -q server@192.168.1.202 "sudo reboot"'
-alias js='v "/mnt/FILES/Watch/Programming/WebDev/El Zero/Javascript/Practice/main.js"'
-alias wp='cd /home/zed/docker/wordpress && docker-compose up'
-alias lp='cd /home/zed/docker/lamp/ && docker-compose up'
 alias p='jmtpfs ~/phone_mount && sleep 2 && fusermount -u ~/phone_mount && jmtpfs ~/phone_mount && rsync -avr --progress ~/phone_mount/Phone/DCIM/p /mnt/FILES/Watch/Programming/WordPress/Images/Phone'
-ufetch
-##-----------------------------------------------------
-## synth-shell-prompt.sh
-if [ -f ~/.config/synth-shell/synth-shell-prompt.sh ] && [ -n "$( echo $- | grep i )" ]; then
-    source ~/.config/synth-shell/synth-shell-prompt.sh
-fi
+alias rlw='rsync -avu --progress /mnt/FILES/ /mnt/sdb2/Users/Salim/Documents/FILES/'
+alias dn='/bin/bash /home/zed/.config/scripts/set-double-display-normal.sh'
+alias dw='/bin/bash /home/zed/.config/scripts/set-double-display-warmer.sh'
+alias sn='/bin/bash /home/zed/.config/scripts/set-single-display-normal.sh'
+alias sw='/bin/bash /home/zed/.config/scripts/set-single-display-warmer.sh'
 
+~/.config/scripts/ufetch
+##-----------------------------------------------------
 
 cmg() {
     git add .
@@ -187,7 +162,43 @@ lzg() {
     git push
 }
 
+extract () {
+    if [ -f "$1" ]; then
+        case "$1" in
+            *.tar.bz2)   tar xvjf "$1" ;;
+            *.tar.gz)    tar xvzf "$1" ;;
+            *.tar.xz)    tar xvJf "$1" ;;
+            *.tar.zst)   unzstd --stdout "$1" | tar xvf - ;;
+            *.tar.lz4)   lz4 -d "$1" | tar xvf - ;;
+            *.tar)       tar xvf "$1" ;;
+            *.tbz2)      tar xvjf "$1" ;;
+            *.tgz)       tar xvzf "$1" ;;
+            *.zip)       unzip "$1" ;;
+            *.rar)       unrar x "$1" ;;
+            *.7z)        7z x "$1" ;;
+            *.gz)        gunzip "$1" ;;
+            *.bz2)       bunzip2 "$1" ;;
+            *.xz)        unxz "$1" ;;
+            *.zst)       unzstd "$1" ;;
+            *.lz4)       lz4 -d "$1" "${1%.lz4}" ;;
+            *.tar.lz)    lzip -d -c "$1" | tar xvf - ;;
+            *)           echo "❌ Cannot extract '$1' — unknown format." ;;
+        esac
+    else
+        echo "'$1' is not a valid file."
+    fi
+}
+
 fc() { du -a ~/.config/* | awk '{print $2}' | fzf | xargs -r $EDITOR;}
 
 export EDITOR=nvim
-export BROWSER=chromium
+export BROWSER=firefox
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export ANDROID_HOME=/opt/android-sdk
+export PATH=$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin
+
+eval "$(starship init bash)"
